@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java常用API | 理想与现实</title>
+    <meta name="description" content="学习如逆水行舟，不进则退。">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="https://infinitypro-img.infinitynewtab.com/custom-icon/8001de1jd3n68lbfnxxt564xvb0vl5.png?imageMogr2/thumbnail/240x/format/webp/blur/1x0/quality/100|imageslim">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <script language="javascript" type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
+  <script language="javascript" type="text/javascript" src="/js/MouseClickEffect.js"></script>
+    
+    <link rel="preload" href="/assets/css/0.styles.751c9989.css" as="style"><link rel="preload" href="/assets/js/app.905c73bd.js" as="script"><link rel="preload" href="/assets/js/5.6d8b57f8.js" as="script"><link rel="preload" href="/assets/js/1.1422e221.js" as="script"><link rel="preload" href="/assets/js/2.95e401c1.js" as="script"><link rel="preload" href="/assets/js/33.a801325c.js" as="script"><link rel="preload" href="/assets/js/20.75d616fd.js" as="script"><link rel="prefetch" href="/assets/js/10.9200e9c9.js"><link rel="prefetch" href="/assets/js/100.fb111b27.js"><link rel="prefetch" href="/assets/js/101.19d260dd.js"><link rel="prefetch" href="/assets/js/102.4eb39868.js"><link rel="prefetch" href="/assets/js/103.93ef0837.js"><link rel="prefetch" href="/assets/js/104.0482ec3b.js"><link rel="prefetch" href="/assets/js/105.109b7ccd.js"><link rel="prefetch" href="/assets/js/106.4be03f58.js"><link rel="prefetch" href="/assets/js/107.9837dbee.js"><link rel="prefetch" href="/assets/js/108.58cb99f2.js"><link rel="prefetch" href="/assets/js/109.d9d5a517.js"><link rel="prefetch" href="/assets/js/11.63d461fa.js"><link rel="prefetch" href="/assets/js/110.97cea850.js"><link rel="prefetch" href="/assets/js/111.46e893c9.js"><link rel="prefetch" href="/assets/js/112.ea295982.js"><link rel="prefetch" href="/assets/js/113.59820563.js"><link rel="prefetch" href="/assets/js/114.50d6c3ce.js"><link rel="prefetch" href="/assets/js/12.dba8b982.js"><link rel="prefetch" href="/assets/js/13.251e5535.js"><link rel="prefetch" href="/assets/js/14.a8128e57.js"><link rel="prefetch" href="/assets/js/15.e69cbd44.js"><link rel="prefetch" href="/assets/js/16.2783313a.js"><link rel="prefetch" href="/assets/js/17.6bfa5b0a.js"><link rel="prefetch" href="/assets/js/18.238d246a.js"><link rel="prefetch" href="/assets/js/19.67e51aad.js"><link rel="prefetch" href="/assets/js/21.860e8f52.js"><link rel="prefetch" href="/assets/js/22.b69e6181.js"><link rel="prefetch" href="/assets/js/23.b2057436.js"><link rel="prefetch" href="/assets/js/24.44436173.js"><link rel="prefetch" href="/assets/js/25.5167071b.js"><link rel="prefetch" href="/assets/js/26.078d334d.js"><link rel="prefetch" href="/assets/js/27.541dbcfa.js"><link rel="prefetch" href="/assets/js/28.e693ca32.js"><link rel="prefetch" href="/assets/js/29.b112986c.js"><link rel="prefetch" href="/assets/js/30.009265fb.js"><link rel="prefetch" href="/assets/js/31.c684c005.js"><link rel="prefetch" href="/assets/js/32.6e80119e.js"><link rel="prefetch" href="/assets/js/34.8d48f944.js"><link rel="prefetch" href="/assets/js/35.b0434f7c.js"><link rel="prefetch" href="/assets/js/36.33ac9bd4.js"><link rel="prefetch" href="/assets/js/37.d6adb25b.js"><link rel="prefetch" href="/assets/js/38.1413d862.js"><link rel="prefetch" href="/assets/js/39.fbccefa6.js"><link rel="prefetch" href="/assets/js/40.7b803087.js"><link rel="prefetch" href="/assets/js/41.438d8ed7.js"><link rel="prefetch" href="/assets/js/42.68b69a78.js"><link rel="prefetch" href="/assets/js/43.1d0ff059.js"><link rel="prefetch" href="/assets/js/44.05a3f7fd.js"><link rel="prefetch" href="/assets/js/45.d6addb46.js"><link rel="prefetch" href="/assets/js/46.12a7af33.js"><link rel="prefetch" href="/assets/js/47.4f5187e1.js"><link rel="prefetch" href="/assets/js/48.be4109a6.js"><link rel="prefetch" href="/assets/js/49.141c7c0e.js"><link rel="prefetch" href="/assets/js/50.0eb648ed.js"><link rel="prefetch" href="/assets/js/51.a4b05c45.js"><link rel="prefetch" href="/assets/js/52.8f145245.js"><link rel="prefetch" href="/assets/js/53.9b4cca64.js"><link rel="prefetch" href="/assets/js/54.55c9f6cf.js"><link rel="prefetch" href="/assets/js/55.acd0deda.js"><link rel="prefetch" href="/assets/js/56.94fc933d.js"><link rel="prefetch" href="/assets/js/57.3dc568b8.js"><link rel="prefetch" href="/assets/js/58.3bb73c10.js"><link rel="prefetch" href="/assets/js/59.a6e25c05.js"><link rel="prefetch" href="/assets/js/6.84cf4e0b.js"><link rel="prefetch" href="/assets/js/60.d585e757.js"><link rel="prefetch" href="/assets/js/61.85e2222d.js"><link rel="prefetch" href="/assets/js/62.d7ef5ff8.js"><link rel="prefetch" href="/assets/js/63.b007545c.js"><link rel="prefetch" href="/assets/js/64.184071c0.js"><link rel="prefetch" href="/assets/js/65.89984d6a.js"><link rel="prefetch" href="/assets/js/66.2e5b0d73.js"><link rel="prefetch" href="/assets/js/67.6d06a15f.js"><link rel="prefetch" href="/assets/js/68.5d9b81aa.js"><link rel="prefetch" href="/assets/js/69.1e226a88.js"><link rel="prefetch" href="/assets/js/7.b690701e.js"><link rel="prefetch" href="/assets/js/70.96d7a3d0.js"><link rel="prefetch" href="/assets/js/71.ccb6f789.js"><link rel="prefetch" href="/assets/js/72.d6a2843f.js"><link rel="prefetch" href="/assets/js/73.5b029b58.js"><link rel="prefetch" href="/assets/js/74.70dfa2b2.js"><link rel="prefetch" href="/assets/js/75.a991dab7.js"><link rel="prefetch" href="/assets/js/76.20c8c2e6.js"><link rel="prefetch" href="/assets/js/77.66f200c0.js"><link rel="prefetch" href="/assets/js/78.503e93cc.js"><link rel="prefetch" href="/assets/js/79.d32c8eb6.js"><link rel="prefetch" href="/assets/js/8.9add0480.js"><link rel="prefetch" href="/assets/js/80.d0f17ccb.js"><link rel="prefetch" href="/assets/js/81.b67b1479.js"><link rel="prefetch" href="/assets/js/82.821bc008.js"><link rel="prefetch" href="/assets/js/83.94dce256.js"><link rel="prefetch" href="/assets/js/84.eb8d4fe6.js"><link rel="prefetch" href="/assets/js/85.058b5b70.js"><link rel="prefetch" href="/assets/js/86.76e98f3d.js"><link rel="prefetch" href="/assets/js/87.e4bcfa95.js"><link rel="prefetch" href="/assets/js/88.7a9d1eb7.js"><link rel="prefetch" href="/assets/js/89.45c2021f.js"><link rel="prefetch" href="/assets/js/9.34c16ada.js"><link rel="prefetch" href="/assets/js/90.59bd22cf.js"><link rel="prefetch" href="/assets/js/91.1ad00ce5.js"><link rel="prefetch" href="/assets/js/92.7488fe9e.js"><link rel="prefetch" href="/assets/js/93.d6f5bba5.js"><link rel="prefetch" href="/assets/js/94.7ea52b7f.js"><link rel="prefetch" href="/assets/js/95.6bb24157.js"><link rel="prefetch" href="/assets/js/96.6591ca93.js"><link rel="prefetch" href="/assets/js/97.37d6e280.js"><link rel="prefetch" href="/assets/js/98.6a29559c.js"><link rel="prefetch" href="/assets/js/99.0dcec499.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.70881dc9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.751c9989.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-584a622c><div data-v-584a622c><div id="loader-wrapper" class="loading-wrapper" data-v-4b73742e data-v-584a622c data-v-584a622c><div class="loader-main" data-v-4b73742e><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-70f93d87 data-v-584a622c data-v-584a622c><h3 class="title" style="display:none;" data-v-70f93d87 data-v-70f93d87>理想与现实</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-70f93d87 data-v-70f93d87><input type="password" value="" data-v-70f93d87> <span style="width:auto;" data-v-70f93d87>过去无法挽回，未来可以改变！</span> <button data-v-70f93d87>OK</button></label> <div class="footer" style="display:none;" data-v-70f93d87 data-v-70f93d87><span data-v-70f93d87><i class="iconfont reco-theme" data-v-70f93d87></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-70f93d87>vuePress-theme-reco</a></span> <span data-v-70f93d87><i class="iconfont reco-copyright" data-v-70f93d87></i> <a data-v-70f93d87><span data-v-70f93d87>kai-max</span>
+            
+          <span data-v-70f93d87>2021 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-584a622c><header class="navbar" data-v-584a622c><div title="导航" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">理想与现实</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index.html" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/WEB/" class="nav-link"><i class="iconfont undefined"></i>
+  WEB
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JAVA/" class="nav-link"><i class="iconfont undefined"></i>
+  JAVA
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/categories/软考/" class="nav-link"><i class="iconfont undefined"></i>
+  软考
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/总结/" class="nav-link"><i class="iconfont undefined"></i>
+  总结
+</a></li><li class="dropdown-item"><!----> <a href="/categories/相关/" class="nav-link"><i class="iconfont undefined"></i>
+  相关
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      其它
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Projects🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  My Project
+</a></li></ul></li><li class="dropdown-item"><h4>Common sites🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/friends.html" class="nav-link"><i class="iconfont undefined"></i>
+  友 链
+</a></li><li class="dropdown-subitem"><a href="https://docs.oracle.com/javase/8/docs/api/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Java SE API Documentation
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.programcreek.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Program Creek
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Stackoverflow
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://leetcode-cn.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.bootcdn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  BootCDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.linuxcool.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Linux命令大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  编程语言排行榜
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于我
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-584a622c></div> <aside class="sidebar" data-v-584a622c><div class="personal-info-wrapper" data-v-7e653f02><img src="/vuepress/head-fish.jpg" alt="author-avatar" class="personal-img" data-v-7e653f02> <h3 class="name" data-v-7e653f02>
+    kai-max
+  </h3> <div class="num" data-v-7e653f02><div data-v-7e653f02><h3 data-v-7e653f02>87</h3> <h6 data-v-7e653f02>文章</h6></div> <div data-v-7e653f02><h3 data-v-7e653f02>32</h3> <h6 data-v-7e653f02>标签</h6></div></div> <hr data-v-7e653f02></div> <nav class="nav-links"><div class="nav-item"><a href="/index.html" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/WEB/" class="nav-link"><i class="iconfont undefined"></i>
+  WEB
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JAVA/" class="nav-link"><i class="iconfont undefined"></i>
+  JAVA
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/categories/软考/" class="nav-link"><i class="iconfont undefined"></i>
+  软考
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/总结/" class="nav-link"><i class="iconfont undefined"></i>
+  总结
+</a></li><li class="dropdown-item"><!----> <a href="/categories/相关/" class="nav-link"><i class="iconfont undefined"></i>
+  相关
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      其它
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Projects🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  My Project
+</a></li></ul></li><li class="dropdown-item"><h4>Common sites🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/friends.html" class="nav-link"><i class="iconfont undefined"></i>
+  友 链
+</a></li><li class="dropdown-subitem"><a href="https://docs.oracle.com/javase/8/docs/api/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Java SE API Documentation
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.programcreek.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Program Creek
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Stackoverflow
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://leetcode-cn.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.bootcdn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  BootCDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.linuxcool.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Linux命令大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  编程语言排行榜
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于我
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/views/" class="sidebar-link">概览</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>java基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>规范 Standard</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端 Front-end</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>后端 Back-end</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>随笔 Essay</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他 Blog</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>软考</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试题</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>查漏补缺</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试题练习</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-70f93d87 data-v-584a622c><h3 class="title" style="display:none;" data-v-70f93d87 data-v-70f93d87>Java常用API</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-70f93d87 data-v-70f93d87><input type="password" value="" data-v-70f93d87> <span style="width:auto;" data-v-70f93d87>过去无法挽回，未来可以改变！</span> <button data-v-70f93d87>OK</button></label> <div class="footer" style="display:none;" data-v-70f93d87 data-v-70f93d87><span data-v-70f93d87><i class="iconfont reco-theme" data-v-70f93d87></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-70f93d87>vuePress-theme-reco</a></span> <span data-v-70f93d87><i class="iconfont reco-copyright" data-v-70f93d87></i> <a data-v-70f93d87><span data-v-70f93d87>kai-max</span>
+            
+          <span data-v-70f93d87>2021 - </span>
+          2021
+        </a></span></div></div> <div data-v-584a622c><main class="page"><!----> <div class="page-title" style="display:none;"><h1>Java常用API</h1> <hr> <div data-v-7b2e794a><i class="iconfont reco-account" data-v-7b2e794a><span data-v-7b2e794a>kai-max</span></i> <i class="iconfont reco-date" data-v-7b2e794a><span data-v-7b2e794a>2021-05-31</span></i> <i class="iconfont reco-eye" data-v-7b2e794a><span id="/views/Interview/JavaSE%E5%9F%BA%E7%A1%80/%E5%B8%B8%E7%94%A8API.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-7b2e794a><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-7b2e794a><span class="tag-item" data-v-7b2e794a>
+      Java
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><details class="custom-block details"><summary>1.Math.round(11.5)等于多少？Math.round(‐ 11.5) 又等于多少?</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>Math.round(11.5)的返回值是 12，Math.round(-11.5)的返回值是 -11。四舍五入的原理是在参数上加 0.5
+然后进行取整。
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></details><details class="custom-block details"><summary>2.switch 是否能作用在 byte 上，是否能作用在 long 上，是否能作用在 String上?</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>Java5 以前 switch(expr)中，expr 只能是 byte、short、char、int。从 Java 5 开始，Java 中引入了枚举类型， expr 也可以是 enum 类型。
+从 Java 7 开始，expr 还可以是字符串（String），但是长整型（long）在目前所有的版本中都是不可以的。
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></details><details class="custom-block details"><summary>3.数组有没有 length() 方法？String 有没有 length() 方法？</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>数组没有 length()方法，而是有 length 的属性。String 有 length()方法。
+JavaScript 中，获得字符串的长度是通过 length 属性得到的，这一点容易和 Java 混淆。
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></details><details class="custom-block details"><summary>4.String 、StringBuilder 、StringBuffer 的区别？</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>Java 平台提供了两种类型的字符串：String 和 StringBuffer/StringBuilder，它们都可以储存和操作字符串，区别 如下。
+1）String 是只读字符串，也就意味着 String 引用的字符串内容是不能被改变的。初学者可能会有这样的误解：
+1.String str = “abc”；
+2.str = “bcd”;
+如上，字符串 str 明明是可以改变的呀！其实不然，str 仅仅是一个引用对象，它指向一个字符串对象“abc”。第
+二行代码的含义是让 str 重新指向了一个新的字符串“bcd”对象，而“abc”对象并没有任何改变，只不过该对象已经成为一个不可及对象罢了。
+2）StringBuffer/StringBuilder 表示的字符串对象可以直接进行修改。
+
+3）StringBuilder 是 Java5 中引入的，它和 StringBuffer 的方法完全相同，区别在于它是在单线程环境下使用的，因为它的所有方法都没有被 synchronized 修饰，因此它的效率理论上也比 StringBuffer 要高。
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></details><details class="custom-block details"><summary>5.什么情况下用“+”运算符进行字符串连接比调用 StringBuffer/StringBuilder对象的 append 方法连接字符串性能更好？(从底层分析)</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>字符串是 Java 程序中最常用的数据结构之一。在 Java 中 String 类已经重载了&quot;+&quot;。也就是说，字符串可以直接 使用&quot;+&quot;进行连接，如下面代码所示：
+String s = &quot;abc&quot; + &quot;ddd&quot;;
+但这样做真的好吗？当然，这个问题不能简单地回答 yes or no。要根据具体情况来定。在 Java 中提供了一个 StringBuilder 类（这个类只在 J2SE5 及以上版本提供，以前的版本使用 StringBuffer 类），这个类也可以起到&quot;+&quot;的 作用。那么我们应该用哪个呢？
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></details><details class="custom-block details"><summary>6.案例 '+'与append方法的区别？</summary><div class="language- line-numbers-mode"><pre class="language-text"><code> class StringEqualTest {
+	 public static void main(String[] args) { String s1 = &quot;Programming&quot;;
+	 String s2 = new String(&quot;Programming&quot;); String s3 = &quot;Program&quot;;
+	 String s4 = &quot;ming&quot;;
+	 String s5 = &quot;Program&quot; + &quot;ming&quot;; String s6 = s3 + s4;
+	 System.out.println(s1 == s2);          //false
+	 System.out.println(s1 == s5);          //true
+	 System.out.println(s1 == s6);          //false
+	 System.out.println(s1 == s6.intern()); //true
+	 System.out.println(s2 == s2.intern()); //false
+	 }
+     }
+
+补充：解答上面的面试题需要知道如下两个知识点：
+1.String 对象的 intern（）方法会得到字符串对象在常量池中对应的版本的引用
+（如果常量池中有一个字符串与String 对象的 equals 结果是 true），
+如果常量池中没有对应的字符串，则该字符串将被添加到常量池中，然后返回常量池中字符串的引用；
+2.字符串的+操作其本质是创建了 StringBuilder 对象进行 append 操作，
+然后将拼接后的 StringBuilder 对 象用 toString 方法处理成 String 对象，
+这一点可以用 javap -c StringEqualTest.class 命令获得 class 文件对应 的 JVM 字节码指令就可以看出来。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div></details><details class="custom-block details"><summary>7.Java 中的日期和时间</summary><ul><li>如何取得年月日、小时分钟秒？</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>1.public class DateTimeTest {
+2.public static void main(String[] args) {
+3.Calendar cal = Calendar.getInstance();
+4.System.out.println(cal.get(Calendar.YEAR));
+5.System.out.println(cal.get(Calendar.MONTH)); // 0 - 11
+6.System.out.println(cal.get(Calendar.DATE));
+7.System.out.println(cal.get(Calendar.HOUR_OF_DAY));
+8.System.out.println(cal.get(Calendar.MINUTE));
+9.System.out.println(cal.get(Calendar.SECOND));
+10.// Java 8
+11.LocalDateTime dt = LocalDateTime.now();
+12.System.out.println(dt.getYear());
+13.System.out.println(dt.getMonthValue()); // 1 - 12
+14.System.out.println(dt.getDayOfMonth());
+15.System.out.println(dt.getHour());
+16.System.out.println(dt.getMinute());
+17.System.out.println(dt.getSecond());
+18.	}
+19.	}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><ul><li>如何取得从 1970 年 1 月 1 日 0 时 0 分 0 秒到现在的毫秒数？</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>1.Calendar.getInstance().getTimeInMillis(); //第一种方式
+2.System.currentTimeMillis(); //第二种方式
+3.// Java 8
+4.Clock.systemDefaultZone().millis();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>如何取得某月的最后一天？</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>1.//获取当前月第一天：
+2.Calendar c = Calendar.getInstance();
+3.c.add(Calendar.MONTH, 0);
+4.c.set(Calendar.DAY_OF_MONTH,1);//设置为 1 号,当前日期既为本月第一天
+5.String first = format.format(c.getTime());
+6.System.out.println(&quot;===============first:&quot;+first); 7.
+8.//获取当前月最后一天
+9.Calendar ca = Calendar.getInstance();
+10.ca.set(Calendar.DAY_OF_MONTH, ca.getActualMaximum(Calendar.DAY_OF_MONTH));
+11.String last = format.format(ca.getTime());
+12.System.out.println(&quot;===============last:&quot;+last); 13.
+14.//Java 8
+15.LocalDate today = LocalDate.now();
+16.//本月的第一天
+17.LocalDate firstday = LocalDate.of(today.getYear(),today.getMonth(),1);
+18.//本月的最后一天
+19.LocalDate lastDay =today.with(TemporalAdjusters.lastDayOfMonth());
+20.System.out.println(&quot;本月的第一天&quot;+firstday);
+21.System.out.println(&quot;本月的最后一天&quot;+lastDay);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><ul><li>如何格式化日期？
+1）Java.text.DataFormat 的子类（如 SimpleDateFormat 类）中的 format(Date)方法可将日期格式化。
+2） Java 8 中可以用 java.time.format.DateTimeFormatter 来格式化时间日期，代码如下所示：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+class DateFormatTest{ 
+	public static void main(String[] args){
+		SimpleDateFormat oldFormatter = new SimpleDateFormat(&quot;yyyy/MM/dd&quot;); 
+		Date date1 = new Date();
+	System.out.println(oldFormatter.format(date1));
+//java
+	DateTimeFormatter newFormatter = DateTimeFormatter.ofPattern(&quot;yyyy/MM/dd&quot;); 14.	LocalDate date2 = LocalDate.now();
+	System.out.println(date2.format(newFormatter));
+	}
+ }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><ul><li><p>补充：Java 的时间日期 API 一直以来都是被诟病的东西，为了解决这一问题，Java 8 中引入了新的时间日期 API，</p></li> <li><p>其中包括 LocalDate、LocalTime、LocalDateTime、Clock、Instant 等类，这些的类的设计都使用了不变模式，</p></li> <li><p>因此是线程安全的设计。</p></li> <li><p>打印昨天的当前时刻？</p></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>import java.util.Calendar;
+class YesterdayCurrent {
+ static void main(String[] args){
+Calendar cal = Calendar.getInstance();
+cal.add(Calendar.DATE, -1);
+(cal.getTime()); 
+ }
+}
+
+//java-8
+import java.time.LocalDateTime;
+class YesterdayCurrent {
+public static void main(String[] args) {
+LocalDateTime today = LocalDateTime.now();
+LocalDateTime yesterday = today.minusDays(1);
+System.out.println(yesterday);
+	}
+ }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><ul><li>Java8 的日期特性？</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>Java 8 日期/时间 API 是 JSR-310 的实现，它的实现目标是克服旧的日期时间实现中所有的缺陷，新的日期/时间API 的一些设计原则是：
+不变性：新的日期/时间 API 中，所有的类都是不可变的，这对多线程环境有好处。
+关注点分离：新的 API 将人可读的日期时间和机器时间（unix timestamp）明确分离，它为日期（Date）、时间
+（Time）、日期时间（DateTime）、时间戳（unix timestamp）以及时区定义了不同的类。
+清晰：在所有的类中，方法都被明确定义用以完成相同的行为。举个例子，要拿到当前实例我们可以使用 now()方 法， 
+在所有的类中都定义了 format()和 parse()方法，而不是像以前那样专门有一个独立的类。
+为了更好的处理问 题，所有的类都使用了工厂模式和策略模式，一旦你使用了其中某个类的方法，与其他类协同工作并不困难。
+实用操作：所有新的日期/时间 API 类都实现了一系列方法用以完成通用的任务，如：加、减、格式化、解析、从 日期
+/时间中提取单独部分，等等。
+可扩展性：新的日期/时间 API 是工作在 ISO-8601 日历系统上的，但我们也可以将其应用在非 ISO 的日历上。
+
+Java 8 日期/时间 API 包解释
+java.time 包：
+这是新的 Java 日期/时间 API 的基础包，所有的主要基础类都是这个包的一部分，
+如：LocalDate, LocalTime, LocalDateTime, Instant, Period, Duration 等等。
+所有这些类都是不可变的和线程安全的，在绝大多 数情况下，这些类能够有效地处理一些公共的需求。
+java.time.chrono 包：
+这个包为非 ISO 的日历系统定义了一些泛化的 API，我们可以扩展 AbstractChronology 类来创建自己的日历系统。
+java.time.format 包：
+这个包包含能够格式化和解析日期时间对象的类，在绝大多数情况下，我们不应该直接使 用它们，
+因为 java.time 包中相应的类已经提供了格式化和解析的方法。
+java.time.temporal 包：
+这个包包含一些时态对象，我们可以用其找出关于日期/时间对象的某个特定日期或时间， 比如说，可以找到某月的第一天或最后一天。
+你可以非常容易地认出这些方法，因为它们都具有“withXXX”的格 式。
+java.time.zone 包：这个包包含支持不同时区以及相关规则的类。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div></details><details class="custom-block details"><summary>8.Java 8 日期/时间常用 API</summary><ul><li>java.time.LocalDate
+LocalDate 是一个不可变的类，它表示默认格式(yyyy-MM-dd)的日期，
+我们可以使用 now()方法得到当前时间， 也可以提供输入年份、月份和日期的输入参数来创建一个 LocalDate 实例。
+该类为 now()方法提供了重载方法，我们可以传入ZoneId来获得指定时区的日期。
+该类提供与 java.sql.Date 相同的功能，对于如何使用该类，我们来看一个简单的例子。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.journaldev.java8.time; import java.time.LocalDate;
+import java.time.Month; import java.time.ZoneId;
+
+/**
+*LocalDate Examples
+*@author pankaj
+*
+*/
+public class LocalDateExample {
+
+public static void main(String[] args) {
+
+//Current Date
+LocalDate today = LocalDate.now(); System.out.println(&quot;Current Date=&quot;+today);
+//Creating LocalDate by providing input arguments
+LocalDate firstDay_2014 = LocalDate.of(2014, Month.JANUARY, 1); System.out.println(&quot;Specific Date=&quot;+firstDay_2014);
+
+//Try creating date by providing invalid inputs
+//LocalDate feb29_2014 = LocalDate.of(2014, Month.FEBRUARY, 29);
+//Exception in thread &quot;main&quot; java.time.DateTimeException:
+//Invalid date 'February 29' as '2014' is not a leap year
+
+//Current date in &quot;Asia/Kolkata&quot;, you can get it from ZoneId javadoc LocalDate todayKolkata = LocalDate.now(ZoneId.of(&quot;Asia/Kolkata&quot;)); System.out.println(&quot;Current Date in IST=&quot;+todayKolkata);
+
+//java.time.zone.ZoneRulesException: Unknown time-zone ID: IST
+//LocalDate todayIST = LocalDate.now(ZoneId.of(&quot;IST&quot;));
+
+//Getting date from the base date i.e 01/01/1970 LocalDate dateFromBase = LocalDate.ofEpochDay(365); System.out.println(&quot;365th day from base date= &quot;+dateFromBase);
+
+LocalDate hundredDay2014 = LocalDate.ofYearDay(2014, 100); System.out.println(&quot;100th day of 2014=&quot;+hundredDay2014);
+}
+}
+
+输出：
+Current Date=2014-04-28
+Specific Date=2014-01-01 Current Date in IST=2014-04-29 365th day from base date= 1971-01-01
+100th day of 2014=2014-04-10
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><ul><li>java.time.LocalTime
+LocalTime 是一个不可变的类，它的实例代表一个符合人类可读格式的时间，默认格式是 hh:mm:ss.zzz。
+像LocalDate 一样，该类也提供了时区支持，同时也可以传入小时、分钟和秒等输入参数创建实例，
+我们来看一个简单的程序，演示该类的使用方法。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.journaldev.java8.time;
+
+import java.time.LocalTime; import java.time.ZoneId;
+
+/**
+* LocalTime Examples
+*/
+public class LocalTimeExample {
+
+
+public static void main(String[] args) {
+
+
+//Current Time
+LocalTime time = LocalTime.now(); System.out.println(&quot;Current Time=&quot;+time);
+
+//Creating LocalTime by providing input arguments LocalTime specificTime = LocalTime.of(12,20,25,40); System.out.println(&quot;Specific Time of Day=&quot;+specificTime);
+
+//Try creating time by providing invalid inputs
+//LocalTime invalidTime = LocalTime.of(25,20);
+//Exception in thread &quot;main&quot; java.time.DateTimeException:
+//Invalid value for HourOfDay (valid values 0 - 23): 25
+
+
+//Current date in &quot;Asia/Kolkata&quot;, you can get it from ZoneId javadoc LocalTime timeKolkata = LocalTime.now(ZoneId.of(&quot;Asia/Kolkata&quot;)); System.out.println(&quot;Current Time in IST=&quot;+timeKolkata);
+
+//java.time.zone.ZoneRulesException: Unknown time-zone ID: IST
+//LocalTime todayIST = LocalTime.now(ZoneId.of(&quot;IST&quot;));
+
+
+//Getting date from the base date i.e 01/01/1970
+LocalTime specificSecondTime = LocalTime.ofSecondOfDay(10000); System.out.println(&quot;10000th second time= &quot;+specificSecondTime);
+
+}
+}
+输出：
+Current Time=15:51:45.240
+Specific Time of Day=12:20:25.000000040 Current Time in IST=04:21:45.276 10000th second time= 02:46:40
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><ul><li>java.time.LocalDateTime
+LocalDateTime 是一个不可变的日期-时间对象，它表示一组日期-时间，默认格式是 yyyy-MM-dd-HH-mm- ss.zzz。
+它提供了一个工厂方法，接收 LocalDate 和 LocalTime 输入参数，创建 LocalDateTime 实例。
+我们来看一个简单的例子。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.journaldev.java8.time;
+
+import java.time.LocalDate; import java.time.LocalDateTime; import java.time.LocalTime; import java.time.Month;
+import java.time.ZoneId; import java.time.ZoneOffset;
+
+public class LocalDateTimeExample {
+
+
+public static void main(String[] args) {
+
+
+//Current Date
+LocalDateTime today = LocalDateTime.now(); System.out.println(&quot;Current DateTime=&quot;+today);
+
+//Current Date using LocalDate and LocalTime
+today = LocalDateTime.of(LocalDate.now(), LocalTime.now()); System.out.println(&quot;Current DateTime=&quot;+today);
+
+//Creating LocalDateTime by providing input arguments
+LocalDateTime specificDate = LocalDateTime.of(2014, Month.JANUARY, 1, 10, 10, 30);
+System.out.println(&quot;Specific Date=&quot;+specificDate);
+
+
+//Try creating date by providing invalid inputs
+//LocalDateTime feb29_2014 = LocalDateTime.of(2014, Month.FEBRUARY, 28, 25,1,1);
+//Exception in thread &quot;main&quot; java.time.DateTimeException:
+//Invalid value for HourOfDay (valid values 0 - 23): 25
+
+
+//Current date in &quot;Asia/Kolkata&quot;, you can get it from ZoneId javadoc LocalDateTime todayKolkata = LocalDateTime.now(ZoneId.of(&quot;Asia/Kolkata&quot;)); System.out.println(&quot;Current Date in IST=&quot;+todayKolkata);
+
+//java.time.zone.ZoneRulesException: Unknown time-zone ID: IST
+//LocalDateTime todayIST = LocalDateTime.now(ZoneId.of(&quot;IST&quot;));
+
+
+//Getting date from the base date i.e 01/01/1970
+LocalDateTime dateFromBase = LocalDateTime.ofEpochSecond(10000, 0, ZoneOffset.UTC); System.out.println(&quot;10000th second time from 01/01/1970= &quot;+dateFromBase);
+}
+}
+输出：
+Current DateTime=2014-04-28T16:00:49.455 Current DateTime=2014-04-28T16:00:49.493 Specific Date=2014-01-01T10:10:30
+Current Date in IST=2014-04-29T04:30:49.493
+10000th second time from 01/01/1970= 1970-01-01T02:46:40
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br></div></div><p><strong>在所有这三个例子中， 我们已经看到如果我们提供了无效的参数去创建日期/ 时间， 那么系统会抛出java.time.DateTimeException，这是一种运行时异常，我们并不需要显式地捕获它。 同时我们也看到，能够通过传
+入 ZoneId 得到日期/时间数据，你可以从它的 Javadoc 中得到支持的 Zoneid 的列
+表，当运行以上类时，可以得到以上输出。</strong></p> <ul><li>java.time.Instant</li> <li>Instant 类是用在机器可读的时间格式上的，它以 Unix 时间戳的形式存储日期时间，我们来看一个简单的程序</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.journaldev.java8.time;
+import java.time.Duration; import java.time.Instant;
+public class InstantExample {
+
+
+public static void main(String[] args) {
+//Current timestamp
+Instant timestamp = Instant.now(); System.out.println(&quot;Current Timestamp = &quot;+timestamp);
+
+//Instant from timestamp
+Instant specificTime = Instant.ofEpochMilli(timestamp.toEpochMilli()); System.out.println(&quot;Specific Time = &quot;+specificTime);
+
+//Duration example
+Duration thirtyDay = Duration.ofDays(30); System.out.println(thirtyDay);
+}
+}
+输出：
+Current Timestamp = 2014-04-28T23:20:08.489Z Specific Time = 2014-04-28T23:20:08.489Z
+PT720H
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><ul><li>日期 API 工具</li> <li>我们早些时候提到过，大多数日期/时间 API 类都实现了一系列工具方法，如：加/减天数、周数、月份数，等等。</li> <li>还有其他的工具方法能够使用 TemporalAdjuster 调整日期，并计算两个日期间的周期。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.journaldev.java8.time;
+
+import java.time.LocalDate; import java.time.LocalTime; import java.time.Period;
+import java.time.temporal.TemporalAdjusters;
+
+
+public class DateAPIUtilities {
+
+
+public static void main(String[] args) {
+
+
+LocalDate today = LocalDate.now();
+
+
+//Get the Year, check if it's leap year
+System.out.println(&quot;Year &quot;+today.getYear()+&quot; is Leap Year? &quot;+today.isLeapYear());
+//Compare two LocalDate for before and after
+System.out.println(&quot;Today is before 01/01/2015? &quot;+today.isBefore(LocalDate.of(2015,1,1)));
+
+
+//Create LocalDateTime from LocalDate
+System.out.println(&quot;Current Time=&quot;+today.atTime(LocalTime.now()));
+
+
+//plus and minus operations
+System.out.println(&quot;10 days after today will be &quot;+today.plusDays(10)); System.out.println(&quot;3 weeks after today will be &quot;+today.plusWeeks(3)); System.out.println(&quot;20 months after today will be &quot;+today.plusMonths(20));
+
+System.out.println(&quot;10 days before today will be &quot;+today.minusDays(10)); System.out.println(&quot;3 weeks before today will be &quot;+today.minusWeeks(3)); System.out.println(&quot;20 months before today will be &quot;+today.minusMonths(20));
+
+//Temporal adjusters for adjusting the dates System.out.println(&quot;First date of this month= &quot;+today. with(TemporalAdjusters.firstDayOfMonth()));
+LocalDate lastDayOfYear = today.with(TemporalAdjusters.lastDayOfYear()); System.out.println(&quot;Last date of this year= &quot;+lastDayOfYear);
+
+Period period = today.until(lastDayOfYear); System.out.println(&quot;Period Format= &quot;+period);
+System.out.println(&quot;Months remaining in the year= &quot;+period.getMonths());
+}
+}
+输出：
+Year 2014 is Leap Year? false Today is before 01/01/2015? true
+Current Time=2014-04-28T16:23:53.154
+10 days after today will be 2014-05-08
+3 weeks after today will be 2014-05-19
+20 months after today will be 2015-12-28
+10 days before today will be 2014-04-18
+3 weeks before today will be 2014-04-07
+20 months before today will be 2012-08-28 First date of this month= 2014-04-01 Last date of this year= 2014-12-31
+Period Format= P8M3D
+Months remaining in the year= 8
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br></div></div><ul><li>解析和格式化
+将一个日期格式转换为不同的格式，之后再解析一个字符串，得到日期时间对象，这些都是很常见的。我们来看一 下简单的例子。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.journaldev.java8.time; import java.time.Instant;
+import java.time.LocalDate; import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+
+public class DateParseFormatExample {
+
+
+public static void main(String[] args) {
+
+
+//Format examples
+LocalDate date = LocalDate.now();
+//default format
+System.out.println(&quot;Default format of LocalDate=&quot;+date);
+//specific format System.out.println(date.format(DateTimeFormatter.ofPattern(&quot;d::MMM::uuuu&quot;))); System.out.println(date.format(DateTimeFormatter.BASIC_ISO_DATE));
+
+LocalDateTime dateTime = LocalDateTime.now();
+//default format
+System.out.println(&quot;Default format of LocalDateTime=&quot;+dateTime);
+//specific format System.out.println(dateTime.format(DateTimeFormatter.ofPattern(&quot;d::MMM::uuuu HH::mm::ss&quot;)));
+System.out.println(dateTime.format(DateTimeFormatter.BASIC_ISO_DATE));
+
+
+Instant timestamp = Instant.now();
+//default format
+System.out.println(&quot;Default format of Instant=&quot;+timestamp);
+
+//Parse examples
+LocalDateTime dt = LocalDateTime.parse(&quot;27::Apr::2014 21::39::48&quot;, DateTimeFormatter.ofPattern(&quot;d::MMM::uuuu HH::mm::ss&quot;));
+System.out.println(&quot;Default format after parsing = &quot;+dt);
+}
+}
+输出：
+Default format of LocalDate=2014-04-28
+28::Apr::2014
+20140428
+Default format of LocalDateTime=2014-04-28T16:25:49.341 28::Apr::2014 16::25::49
+20140428
+Default format of Instant=2014-04-28T23:25:49.342Z Default format after parsing = 2014-04-27T21:39:48
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><ul><li>旧的日期时间支持</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.journaldev.java8.time;
+
+import java.time.Instant; import java.time.LocalDateTime; import java.time.ZoneId;
+import java.time.ZonedDateTime; import java.util.Calendar; import java.util.Date;
+import java.util.GregorianCalendar; import java.util.TimeZone;
+
+public class DateAPILegacySupport {
+
+
+public static void main(String[] args) {
+
+
+//Date to Instant
+Instant timestamp = new Date().toInstant();
+//Now we can convert Instant to LocalDateTime or other similar classes LocalDateTime date = LocalDateTime.ofInstant(timestamp,
+ZoneId.of(ZoneId.SHORT_IDS.get(&quot;PST&quot;))); System.out.println(&quot;Date = &quot;+date);
+
+//Calendar to Instant
+Instant time = Calendar.getInstance().toInstant(); System.out.println(time);
+//TimeZone to ZoneId
+ZoneId defaultZone = TimeZone.getDefault().toZoneId();
+System.out.println(defaultZone);
+
+
+//ZonedDateTime from specific Calendar
+ZonedDateTime gregorianCalendarDateTime = new GregorianCalendar().toZonedDateTime(); System.out.println(gregorianCalendarDateTime);
+
+//Date API to Legacy classes
+Date dt = Date.from(Instant.now()); System.out.println(dt);
+
+TimeZone tz = TimeZone.getTimeZone(defaultZone); System.out.println(tz);
+
+GregorianCalendar gc = GregorianCalendar.from(gregorianCalendarDateTime); System.out.println(gc);
+
+}
+}
+输出：
+Date = 2014-04-
+28T16:28:54.340 2014-04-
+28T23:28:54.395Z
+America/Los_Angeles
+2014-04-28T16:28:54.404-07:00[America/Los_Angeles]
+Mon Apr 28 16:28:54 PDT 2014
+sun.util.calendar.ZoneInfo[id=&quot;America/Los_Angeles&quot;,offset=- 28800000,dstSavings=3600000,useDaylight=true,transitions=185,lastRule=java.util.SimpleTimeZone[id=A merica/Los_Angeles,offset=- 28800000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=2,startDay=8,startD ayOfWeek=1,startTime=7200000,startTimeMode=0,endMode=3,endMonth=10,endDay=1,endDayOfWeek=1,endTime= 7200000,endTimeMode=0]]
+java.util.GregorianCalendar[time=1398727734404,areFieldsSet=true,areAllFieldsSet=true,lenient=t rue,zone=sun.util.calendar.ZoneInfo[id=&quot;America/Los_Angeles&quot;,offset=- 28800000,dstSavings=3600000,useDaylight=true,transitions=185,lastRule=java.util.SimpleTimeZone[id=A merica/Los_Angeles,offset=- 28800000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=2,startDay=8,startD ayOfWeek=1,startTime=7200000,startTimeMode=0,endMode=3,endMonth=10,endDay=1,endDayOfWeek=1,endTime= 7200000,endTimeMode=0]],firstDayOfWeek=2,minimalDaysInFirstWeek=4,ERA=1,YEAR=2014,MONTH=3,WEEK_OF_Y EAR=18,WEEK_OF_MONTH=5,DAY_OF_MONTH=28,DAY_OF_YEAR=118,DAY_OF_WEEK=2,DAY_OF_WEEK_IN_MONTH=4,AM_PM=1
+,HOUR=4,HOUR_OF_DAY=16,MINUTE=28,SECOND=54,MILLISECOND=404,ZONE_OFFSET=-28800000,DST_OFFSET=3600000]
+
+
+补充：我们可以看到，旧的 TimeZone 和 GregorianCalendar 类的 toString()方法太啰嗦了，一点都不友好。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br></div></div><ul><li><p>Java8 之前的日期和时间使用的槽点
+暂时不补充</p></li> <li><p>Java8 日期实现JSR310 规范
+1.JSR310 介绍</p></li></ul> <p>JSR 310 实际上有两个日期概念。第一个是 Instant，它大致对应于 java.util.Date 类，
+因为它代表了一个确定 的时间点，即相对于标准 Java 纪元（1970 年 1 月 1 日）的偏移量；
+但与 java.util.Date 类不同的是其精确到了 纳秒级别。
+第二个对应于人类自身的观念，比如 LocalDate 和 LocalTime。
+他们代表了一般的时区概念，要么是日期（不包含时间），要么是时间（不包含日期），类似于 java.sql 的表示方式。
+此外，还有一个 MonthDay，它可以存储 某人的生日（不包含年份）。
+每个类都在内部存储正确的数据而不是像 java.util.Date 那样利用午夜 12 点来区分 日期，利用 1970-01-01 来表示时间。
+目前 Java8 已经实现了 JSR310 的全部内容。
+新增了 java.time 包定义的类表示了日期-时间概念的规则，包括 instants,durations, dates, times, time-zones and periods。
+这些都是基于 ISO 日历系统，它又是遵循Gregorian 规则的。
+最重要的一点是值不可变，且线程安全，通过下面一张图，我们快速看下 java.time 包下的一些主要的类的值的格式，方便理解。</p> <p>2.Java8 方法概览</p> <p>3.简单实用 java.time 的API 实用</p> <p>总结
+|Java.time	|java.util.Calendar 以及 Date	|
+|流畅的 API	|不流畅的 API					|
+|实例不可变	|实例可变						|
+|线程安全	|非线程安全						|</p></details></div> <footer class="page-edit" style="display:none;"><div class="edit-link"><a href="https://github.com/kai-max/edit/master/docs/views/Interview/JavaSE基础/常用API.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> <!----> <div class="article-list" data-v-2af88190><div class="article-title" data-v-2af88190><a href="/timeline/" class="iconfont icon-shizhong" data-v-2af88190>最近更新</a></div> <div class="article-wrapper" data-v-2af88190><dl data-v-2af88190><dd data-v-2af88190>01</dd> <dt data-v-2af88190><a href="/views/Interview/%E7%BB%83%E4%B9%A0/%E9%9B%86%E5%90%88/java-02.html" data-v-2af88190><div data-v-2af88190>java集合框架常见面试题</div></a> <span data-v-2af88190>07-12</span></dt></dl><dl data-v-2af88190><dd data-v-2af88190>02</dd> <dt data-v-2af88190><a href="/views/Interview/JavaSE%E9%AB%98%E7%BA%A7/java%E5%A4%9A%E7%BA%BF%E7%A8%8B-lwk.html" data-v-2af88190><div data-v-2af88190>Java多线程</div></a> <span data-v-2af88190>07-08</span></dt></dl><dl data-v-2af88190><dd data-v-2af88190>03</dd> <dt data-v-2af88190><a href="/views/Interview/%E7%BB%83%E4%B9%A0/%E5%9F%BA%E7%A1%80/java-01.html" data-v-2af88190><div data-v-2af88190>java基础练习</div></a> <span data-v-2af88190>07-08</span></dt></dl></div> <div data-v-2af88190><a href="/timeline/" class="article-more" data-v-2af88190>更多文章 &gt;</a></div></div></main> <!----> <div class="comments-wrapper" data-v-584a622c><div class="valine-wrapper"><div id="valine"></div></div></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-a81d141e data-v-a81d141e><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a81d141e><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a81d141e></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a81d141e></path></svg></div><!----><div data-v-48108b4c><div class="DetailsOpenFlag" style="right:1rem;bottom:9rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;font-size:14px;font-weight:500;display:none;" data-v-48108b4c>
+ 展开 
+
+</div></div><div id="musicPlayer" data-v-0584ea4d><!----> <div class="bbox" data-v-0584ea4d><div class="pan" style="background-image:url(/assets/img/pan.07613e22.png);" data-v-0584ea4d><img src="" alt class="pan_c" data-v-0584ea4d></div> <div class="box" style="background-image:url();" data-v-0584ea4d><div class="music_shlter_2" style="background-image:url();" data-v-0584ea4d></div> <div class="music_shlter" style="background-image:url();" data-v-0584ea4d></div> <div class="music_shlter_3" data-v-0584ea4d></div> <div class="music_dis" data-v-0584ea4d><div class="dis_list" data-v-0584ea4d>···</div> <p class="music_title" data-v-0584ea4d></p> <p class="music_intro" data-v-0584ea4d>歌手: </p> <ul class="music_words" data-v-0584ea4d><div class="music_words_box" style="top:0px;" data-v-0584ea4d></div></ul></div> <div class="control_box" data-v-0584ea4d><div class="control_button" data-v-0584ea4d><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAACMCAYAAACksC0pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALjSURBVHhe7doxbuswFETRSG68pVTZ+y+SJdmVE/GDC0hzBxnynoqpBGhIaoy84/vyBnu9Xv9ut9vH/HN5j8fj836/v88/Mc/n8+uca9RxHPgm2VUkwN2kNux4TiTA65Y+5nIL53m+5hI1nuMJLGeAgKu0xW42AwQEiv1/10bJBLhhC0198z2BBFtoueUC3I0BlkvdOLZQyGiHc4myhXJsoc2CG9YWSkgFeJ6nJYZgCy1nCy23XIC7tVBPYL/YhjVAwGiHc4mK/Uc+daX8FbZQ/YrfQEhqpGIwQEDqkzE2SiTA3X5GJHkCAcuVmN1aqIO95ZIb1gABqQD9GQG5XuxcsRyp4KSuUE8gwRZabrkAd2OA5Wyh5Rzs7WcLbRbcsLZQQipAB3shttByttByywW4Wwv1BPaLbVgDBDjYW84WWs5vYLnkjWOAgFSADvYuwBMISG1YWyhkvNi5RNlCIZaYcqkAx3MMEHC92LliOVLBSV2hnkBCasPGSowtlGELLWeAEFtoOQd7+9lCmwU3rC2UkApwjG54AgGpAG2hEFtoueUC3K2FegL7xTasAQJGO5xLlCMVEFtoOb+B5ZI3jgECUgE62LsATyAgtWFtoRBHKspZYsqlAhzPMUDA9WLniuVIBSd1hXoCCakNGysxtlCGLbScAUJsoeUc7O1nC20W3LC2UEIqwDG64QkEpAK0hUJsoeWWC3C3FuoJ7BfbsAYIGO1wLlGOVEBsoeX8BpZL3jgGCEgF6GDvAjyBgOVKzG4tNDVSEfsZsRtLTLlUgOM5Bgi4XuxcsRyp4KSuUE8gwRZabrkAd2OA5Wyh5Rzs7WcLbRbcsLZQQipAB3shttByttByywW4Wwv1BPaLbVgDBDjYW84Wql/xGwgZ85pziTNAQOqT4WDvAjyBgOVKzG4t1MHecskNa4CAVID+jIBcL3auWI5UcFJXqCeQYAstt1yAuzHAcrbQcg729rOFNstt2LfvHxY+GuRFc4rhAAAAAElFTkSuQmCC" alt class="control_icon" data-v-0584ea4d></div> <div class="progress" data-v-0584ea4d><div class="progress_c" style="width:0%;" data-v-0584ea4d><div class="progress_circle" data-v-0584ea4d><div class="progress_circle_c" data-v-0584ea4d></div></div></div></div></div></div> <video id="music" autoplay="autoplay" src="" name="media" data-v-0584ea4d></video></div></div><!----></div></div>
+    <script src="/assets/js/app.905c73bd.js" defer></script><script src="/assets/js/5.6d8b57f8.js" defer></script><script src="/assets/js/1.1422e221.js" defer></script><script src="/assets/js/2.95e401c1.js" defer></script><script src="/assets/js/33.a801325c.js" defer></script><script src="/assets/js/20.75d616fd.js" defer></script>
+  </body>
+</html>

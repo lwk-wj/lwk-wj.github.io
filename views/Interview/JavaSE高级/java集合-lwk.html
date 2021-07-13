@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java集合 | 理想与现实</title>
+    <meta name="description" content="学习如逆水行舟，不进则退。">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="https://infinitypro-img.infinitynewtab.com/custom-icon/8001de1jd3n68lbfnxxt564xvb0vl5.png?imageMogr2/thumbnail/240x/format/webp/blur/1x0/quality/100|imageslim">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <script language="javascript" type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
+  <script language="javascript" type="text/javascript" src="/js/MouseClickEffect.js"></script>
+    
+    <link rel="preload" href="/assets/css/0.styles.751c9989.css" as="style"><link rel="preload" href="/assets/js/app.905c73bd.js" as="script"><link rel="preload" href="/assets/js/5.6d8b57f8.js" as="script"><link rel="preload" href="/assets/js/1.1422e221.js" as="script"><link rel="preload" href="/assets/js/2.95e401c1.js" as="script"><link rel="preload" href="/assets/js/39.fbccefa6.js" as="script"><link rel="preload" href="/assets/js/20.75d616fd.js" as="script"><link rel="prefetch" href="/assets/js/10.9200e9c9.js"><link rel="prefetch" href="/assets/js/100.fb111b27.js"><link rel="prefetch" href="/assets/js/101.19d260dd.js"><link rel="prefetch" href="/assets/js/102.4eb39868.js"><link rel="prefetch" href="/assets/js/103.93ef0837.js"><link rel="prefetch" href="/assets/js/104.0482ec3b.js"><link rel="prefetch" href="/assets/js/105.109b7ccd.js"><link rel="prefetch" href="/assets/js/106.4be03f58.js"><link rel="prefetch" href="/assets/js/107.9837dbee.js"><link rel="prefetch" href="/assets/js/108.58cb99f2.js"><link rel="prefetch" href="/assets/js/109.d9d5a517.js"><link rel="prefetch" href="/assets/js/11.63d461fa.js"><link rel="prefetch" href="/assets/js/110.97cea850.js"><link rel="prefetch" href="/assets/js/111.46e893c9.js"><link rel="prefetch" href="/assets/js/112.ea295982.js"><link rel="prefetch" href="/assets/js/113.59820563.js"><link rel="prefetch" href="/assets/js/114.50d6c3ce.js"><link rel="prefetch" href="/assets/js/12.dba8b982.js"><link rel="prefetch" href="/assets/js/13.251e5535.js"><link rel="prefetch" href="/assets/js/14.a8128e57.js"><link rel="prefetch" href="/assets/js/15.e69cbd44.js"><link rel="prefetch" href="/assets/js/16.2783313a.js"><link rel="prefetch" href="/assets/js/17.6bfa5b0a.js"><link rel="prefetch" href="/assets/js/18.238d246a.js"><link rel="prefetch" href="/assets/js/19.67e51aad.js"><link rel="prefetch" href="/assets/js/21.860e8f52.js"><link rel="prefetch" href="/assets/js/22.b69e6181.js"><link rel="prefetch" href="/assets/js/23.b2057436.js"><link rel="prefetch" href="/assets/js/24.44436173.js"><link rel="prefetch" href="/assets/js/25.5167071b.js"><link rel="prefetch" href="/assets/js/26.078d334d.js"><link rel="prefetch" href="/assets/js/27.541dbcfa.js"><link rel="prefetch" href="/assets/js/28.e693ca32.js"><link rel="prefetch" href="/assets/js/29.b112986c.js"><link rel="prefetch" href="/assets/js/30.009265fb.js"><link rel="prefetch" href="/assets/js/31.c684c005.js"><link rel="prefetch" href="/assets/js/32.6e80119e.js"><link rel="prefetch" href="/assets/js/33.a801325c.js"><link rel="prefetch" href="/assets/js/34.8d48f944.js"><link rel="prefetch" href="/assets/js/35.b0434f7c.js"><link rel="prefetch" href="/assets/js/36.33ac9bd4.js"><link rel="prefetch" href="/assets/js/37.d6adb25b.js"><link rel="prefetch" href="/assets/js/38.1413d862.js"><link rel="prefetch" href="/assets/js/40.7b803087.js"><link rel="prefetch" href="/assets/js/41.438d8ed7.js"><link rel="prefetch" href="/assets/js/42.68b69a78.js"><link rel="prefetch" href="/assets/js/43.1d0ff059.js"><link rel="prefetch" href="/assets/js/44.05a3f7fd.js"><link rel="prefetch" href="/assets/js/45.d6addb46.js"><link rel="prefetch" href="/assets/js/46.12a7af33.js"><link rel="prefetch" href="/assets/js/47.4f5187e1.js"><link rel="prefetch" href="/assets/js/48.be4109a6.js"><link rel="prefetch" href="/assets/js/49.141c7c0e.js"><link rel="prefetch" href="/assets/js/50.0eb648ed.js"><link rel="prefetch" href="/assets/js/51.a4b05c45.js"><link rel="prefetch" href="/assets/js/52.8f145245.js"><link rel="prefetch" href="/assets/js/53.9b4cca64.js"><link rel="prefetch" href="/assets/js/54.55c9f6cf.js"><link rel="prefetch" href="/assets/js/55.acd0deda.js"><link rel="prefetch" href="/assets/js/56.94fc933d.js"><link rel="prefetch" href="/assets/js/57.3dc568b8.js"><link rel="prefetch" href="/assets/js/58.3bb73c10.js"><link rel="prefetch" href="/assets/js/59.a6e25c05.js"><link rel="prefetch" href="/assets/js/6.84cf4e0b.js"><link rel="prefetch" href="/assets/js/60.d585e757.js"><link rel="prefetch" href="/assets/js/61.85e2222d.js"><link rel="prefetch" href="/assets/js/62.d7ef5ff8.js"><link rel="prefetch" href="/assets/js/63.b007545c.js"><link rel="prefetch" href="/assets/js/64.184071c0.js"><link rel="prefetch" href="/assets/js/65.89984d6a.js"><link rel="prefetch" href="/assets/js/66.2e5b0d73.js"><link rel="prefetch" href="/assets/js/67.6d06a15f.js"><link rel="prefetch" href="/assets/js/68.5d9b81aa.js"><link rel="prefetch" href="/assets/js/69.1e226a88.js"><link rel="prefetch" href="/assets/js/7.b690701e.js"><link rel="prefetch" href="/assets/js/70.96d7a3d0.js"><link rel="prefetch" href="/assets/js/71.ccb6f789.js"><link rel="prefetch" href="/assets/js/72.d6a2843f.js"><link rel="prefetch" href="/assets/js/73.5b029b58.js"><link rel="prefetch" href="/assets/js/74.70dfa2b2.js"><link rel="prefetch" href="/assets/js/75.a991dab7.js"><link rel="prefetch" href="/assets/js/76.20c8c2e6.js"><link rel="prefetch" href="/assets/js/77.66f200c0.js"><link rel="prefetch" href="/assets/js/78.503e93cc.js"><link rel="prefetch" href="/assets/js/79.d32c8eb6.js"><link rel="prefetch" href="/assets/js/8.9add0480.js"><link rel="prefetch" href="/assets/js/80.d0f17ccb.js"><link rel="prefetch" href="/assets/js/81.b67b1479.js"><link rel="prefetch" href="/assets/js/82.821bc008.js"><link rel="prefetch" href="/assets/js/83.94dce256.js"><link rel="prefetch" href="/assets/js/84.eb8d4fe6.js"><link rel="prefetch" href="/assets/js/85.058b5b70.js"><link rel="prefetch" href="/assets/js/86.76e98f3d.js"><link rel="prefetch" href="/assets/js/87.e4bcfa95.js"><link rel="prefetch" href="/assets/js/88.7a9d1eb7.js"><link rel="prefetch" href="/assets/js/89.45c2021f.js"><link rel="prefetch" href="/assets/js/9.34c16ada.js"><link rel="prefetch" href="/assets/js/90.59bd22cf.js"><link rel="prefetch" href="/assets/js/91.1ad00ce5.js"><link rel="prefetch" href="/assets/js/92.7488fe9e.js"><link rel="prefetch" href="/assets/js/93.d6f5bba5.js"><link rel="prefetch" href="/assets/js/94.7ea52b7f.js"><link rel="prefetch" href="/assets/js/95.6bb24157.js"><link rel="prefetch" href="/assets/js/96.6591ca93.js"><link rel="prefetch" href="/assets/js/97.37d6e280.js"><link rel="prefetch" href="/assets/js/98.6a29559c.js"><link rel="prefetch" href="/assets/js/99.0dcec499.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.70881dc9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.751c9989.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-584a622c><div data-v-584a622c><div id="loader-wrapper" class="loading-wrapper" data-v-4b73742e data-v-584a622c data-v-584a622c><div class="loader-main" data-v-4b73742e><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-70f93d87 data-v-584a622c data-v-584a622c><h3 class="title" style="display:none;" data-v-70f93d87 data-v-70f93d87>理想与现实</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-70f93d87 data-v-70f93d87><input type="password" value="" data-v-70f93d87> <span style="width:auto;" data-v-70f93d87>过去无法挽回，未来可以改变！</span> <button data-v-70f93d87>OK</button></label> <div class="footer" style="display:none;" data-v-70f93d87 data-v-70f93d87><span data-v-70f93d87><i class="iconfont reco-theme" data-v-70f93d87></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-70f93d87>vuePress-theme-reco</a></span> <span data-v-70f93d87><i class="iconfont reco-copyright" data-v-70f93d87></i> <a data-v-70f93d87><span data-v-70f93d87>kai-max</span>
+            
+          <span data-v-70f93d87>2021 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-584a622c><header class="navbar" data-v-584a622c><div title="导航" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">理想与现实</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index.html" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/WEB/" class="nav-link"><i class="iconfont undefined"></i>
+  WEB
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JAVA/" class="nav-link"><i class="iconfont undefined"></i>
+  JAVA
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/categories/软考/" class="nav-link"><i class="iconfont undefined"></i>
+  软考
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/总结/" class="nav-link"><i class="iconfont undefined"></i>
+  总结
+</a></li><li class="dropdown-item"><!----> <a href="/categories/相关/" class="nav-link"><i class="iconfont undefined"></i>
+  相关
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      其它
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Projects🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  My Project
+</a></li></ul></li><li class="dropdown-item"><h4>Common sites🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/friends.html" class="nav-link"><i class="iconfont undefined"></i>
+  友 链
+</a></li><li class="dropdown-subitem"><a href="https://docs.oracle.com/javase/8/docs/api/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Java SE API Documentation
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.programcreek.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Program Creek
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Stackoverflow
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://leetcode-cn.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.bootcdn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  BootCDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.linuxcool.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Linux命令大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  编程语言排行榜
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于我
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-584a622c></div> <aside class="sidebar" data-v-584a622c><div class="personal-info-wrapper" data-v-7e653f02><img src="/vuepress/head-fish.jpg" alt="author-avatar" class="personal-img" data-v-7e653f02> <h3 class="name" data-v-7e653f02>
+    kai-max
+  </h3> <div class="num" data-v-7e653f02><div data-v-7e653f02><h3 data-v-7e653f02>87</h3> <h6 data-v-7e653f02>文章</h6></div> <div data-v-7e653f02><h3 data-v-7e653f02>32</h3> <h6 data-v-7e653f02>标签</h6></div></div> <hr data-v-7e653f02></div> <nav class="nav-links"><div class="nav-item"><a href="/index.html" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/WEB/" class="nav-link"><i class="iconfont undefined"></i>
+  WEB
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JAVA/" class="nav-link"><i class="iconfont undefined"></i>
+  JAVA
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/categories/软考/" class="nav-link"><i class="iconfont undefined"></i>
+  软考
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/总结/" class="nav-link"><i class="iconfont undefined"></i>
+  总结
+</a></li><li class="dropdown-item"><!----> <a href="/categories/相关/" class="nav-link"><i class="iconfont undefined"></i>
+  相关
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      其它
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Projects🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  My Project
+</a></li></ul></li><li class="dropdown-item"><h4>Common sites🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/friends.html" class="nav-link"><i class="iconfont undefined"></i>
+  友 链
+</a></li><li class="dropdown-subitem"><a href="https://docs.oracle.com/javase/8/docs/api/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Java SE API Documentation
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.programcreek.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Program Creek
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Stackoverflow
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://leetcode-cn.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.bootcdn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  BootCDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.linuxcool.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Linux命令大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  编程语言排行榜
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于我
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/views/" class="sidebar-link">概览</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>java基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>规范 Standard</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端 Front-end</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>后端 Back-end</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>随笔 Essay</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他 Blog</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>软考</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试题</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>查漏补缺</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试题练习</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-70f93d87 data-v-584a622c><h3 class="title" style="display:none;" data-v-70f93d87 data-v-70f93d87>Java集合</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-70f93d87 data-v-70f93d87><input type="password" value="" data-v-70f93d87> <span style="width:auto;" data-v-70f93d87>过去无法挽回，未来可以改变！</span> <button data-v-70f93d87>OK</button></label> <div class="footer" style="display:none;" data-v-70f93d87 data-v-70f93d87><span data-v-70f93d87><i class="iconfont reco-theme" data-v-70f93d87></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-70f93d87>vuePress-theme-reco</a></span> <span data-v-70f93d87><i class="iconfont reco-copyright" data-v-70f93d87></i> <a data-v-70f93d87><span data-v-70f93d87>kai-max</span>
+            
+          <span data-v-70f93d87>2021 - </span>
+          2021
+        </a></span></div></div> <div data-v-584a622c><main class="page"><!----> <div class="page-title" style="display:none;"><h1>Java集合</h1> <hr> <div data-v-7b2e794a><i class="iconfont reco-account" data-v-7b2e794a><span data-v-7b2e794a>kai-max</span></i> <i class="iconfont reco-date" data-v-7b2e794a><span data-v-7b2e794a>2021-07-05</span></i> <i class="iconfont reco-eye" data-v-7b2e794a><span id="/views/Interview/JavaSE%E9%AB%98%E7%BA%A7/java%E9%9B%86%E5%90%88-lwk.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-7b2e794a><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-7b2e794a><span class="tag-item" data-v-7b2e794a>
+      Java
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="java集合"><a href="#java集合" class="header-anchor">#</a> java集合</h1> <ul><li>集合、数组都是对多个数据进行存储操作的结构，简称Java容器。</li> <li>集合概述：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>JDK提供的集合API位于java.util包内
+主要有三种：set、list(列表中包含queue)、Map映射，
+每一种集合接口描述了一种数据结构。
+
+注意：java.util.Collections，是不属于java的集合框架的。它是一个集合的工具类。
+比如我们常用它的排序方法：Collections.sort(List), Collections.sort(List, Comparator)。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ul><li>集合图解
+<img src="https://gitee.com/li-wen-kai/picgo/raw/859d0ef611164329c1594251f504f56db8ae6474/img/0c130388a2b97b394b4c0e2d4b2356d2.png" alt=""> <img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/d40a70942c9f61910fb649a9eb7538a7.JPEG" alt=""></li></ul> <h2 id="collection"><a href="#collection" class="header-anchor">#</a> Collection</h2> <ul><li>是集合List、Map、Queue最基本的接口</li> <li>单列集合，用来存储一个一个的对象</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>Collection常用方法：
+add(Object obj),
+addAll(Collection coll),
+size(),
+isEmpty(),
+clear();
+contains(Object obj),
+containsAll(Collection coll),
+remove(Object obj),
+removeAll(Collection coll),
+retainsAll(Collection coll),
+equals(Object obj);
+hasCode(),
+toArray(),
+iterator();
+
+注意：使用Collection集合存储对象，要求对象所属的类满足：
+向Collection接口的实现类的对象中添加数据obj时，要求obj所在类要重写equals().
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p><img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/a22051f25acddf1b33e0e5b970e8a7d8.png" alt=""></p> <h3 id="list"><a href="#list" class="header-anchor">#</a> List</h3> <ul><li>存储序的、可重复的数据。  --&gt;“动态”数组,替换原的数组</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>List集合关心的元素是否有序，而不关心元素是否重复
+List接口是一个有序的 Collection，
+使用此接口能够精确的控制每个元素插入的位置，能够通过索引(元素在List中位置，类似于数组的下标)来访问List中的元素，
+第一个元素的索引为 0，而且允许有相同的元素。
+
+特点：
+   List 接口存储一组不唯一，有序（插入顺序）的对象。
+   
+常用方法：
+增：add(Object obj)
+删：remove(int index) / remove(Object obj)
+改：set(int index, Object ele)
+查：get(int index)
+插：add(int index, Object ele)
+长度：size()
+遍历：① Iterator迭代器方式
+     ② 增强for循环
+     ③ 普通的循环
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><ul><li>list是一个有序的collection</li> <li>list一共三个实现类：ArrayList、LinkList、Vector</li></ul> <details class="custom-block details"><summary>ArrayList(数组)</summary><ul><li>线程不安全的，效率高；底层使用Object[] elementData存储
+ArrayList 是最常用的 List 实现类，内部是通过动态数组实现的，它允许对元素进行快速随机访问。
+数组的缺点是每个元素之间不能有间隔，当数组大小不满足时需要增加存储能力，就要将已经有数组的数据复制到新的存储空间中。
+当从 ArrayList 的中间位置插入或者删除元素时，需要对数组进行复制、移动、代价比较高。</li></ul> <p>使用场景：适合随机查找和遍历，不适合插入和删除。</p></details><details class="custom-block details"><summary>LinkList(链表)</summary><ul><li>对于频繁的插入、删除操作，使用此类效率比ArrayList高；底层使用双向链表存储
+LinkedList 是用链表结构存储数据的，很适合数据的动态插入和删除，随机访问和遍历速度比较
+慢。另外，他还提供了 List 接口中没有定义的方法，专门用于操作表头和表尾元素，可以当作堆
+栈、队列和双向队列使用</li></ul> <p>使用场景：适合数据的动态插入和删除，不适合随机访问和遍历速度</p></details><details class="custom-block details"><summary>Vector(数组实现、线程同步)</summary><ul><li>线程安全的，效率低；底层使用Object[] elementData存储
+Vector 与 ArrayList 一样，也是通过数组实现的，
+不同的是它支持线程的同步，即某一时刻只有一个线程能够写 Vector，避免多线程同时写而引起的不一致性，
+但实现同步需要很高的花费，因此，访问它比访问 ArrayList 慢。</li></ul></details><div class="language- line-numbers-mode"><pre class="language-text"><code>ArrayList访问元素速度优于LinkedList，
+LinkedList占用的内存空间比较大，但LinkedList在批量插入或删除数据时优于ArrayList。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="set"><a href="#set" class="header-anchor">#</a> Set</h3> <ul><li>存储无序的、不可重复的数据</li> <li>存储的数据在底层数组中并非照数组索引的顺序添加，而是根据数据的哈希值决定的。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>Set 具有与 Collection 完全一样的接口，只是行为上不同，Set 不保存重复的元素。
+
+Set 注重独一无二的性质,该集合用于存储无序(存入和取出的顺序不一定相同)元素，值不能重复。
+对象的相等性本质是对象 hashCode 值（java 是依据对象的内存地址计算出的此序号）判断的，
+如果想要让两个不同的对象视为相等的，就必须覆盖 Object 的 hashCode 方法和 equals 方法。
+
+常用方法：Set接口中没额外定义新的方法，使用的都是Collection中声明过的方法。
+特点：
+   Set 接口存储一组唯一，无序的对象。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><details class="custom-block details"><summary>HashSet（Hash 表）</summary><ul><li>Set接口的主要实现类；线程不安全的；可以存储null值，底层：数组+链表结构</li> <li>无序性：存储数据在底层数组中根据数据的哈希值决定，不是随机分配的，按照数组索引顺序进行添加</li> <li>不可重复性：相同元素只能添加一个。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>HashSet元素添加过程：
+向HashSet中添加元素a
+1.调用元素a的所在类hashCode()方法，计算a的哈希值
+2.根据哈希值通过某种算法计算出在HashSet底层数组的存放位置（即为索引位置，判断数组此位置是否已有元素）
+    1）此位置没其他元素，则元素a添加成功
+	2）此位置上其他元素b（或以链表形式存在的多个元素，则比较元素a和元素b的hash值
+	    如果Hash值不相同，则元素a添加成功
+		如果Hash值相同，调用元素a的所在类的equals()方法：
+		     equals()返回true,元素a添加失败
+			 equals(),返回false,元素a，添加成功），
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>哈希表边存放的是哈希值。HashSet 存储元素的顺序并不是按照存入时的顺序（和 List 显然不同） 
+而是按照哈希值来存的所以取数据也是按照哈希值取得。元素的哈希值是通过元素的hashcode 方法来获取的, 
+HashSet 首先判断两个元素的哈希值，如果哈希值一样，接着会比较equals 方法 ，
+如果 equls 结果为 true ，HashSet 就视为同一个元素。如果 equals 为 false 就不是同一个元素。
+
+哈希值相同 equals 为 false 的元素是怎么存储呢,就是在同样的哈希值下顺延（可以认为哈希值相
+同的元素放在一个哈希桶中）。也就是哈希一样的存一列。
+HashSet 通过 hashCode 值来确定元素在内存中的位置。一个 hashCode 位置上可以存放多个元
+素。
+通俗来说，就是我们可以认为有一个数组，每个数组上的位置都存储着一个链表
+向里面存数据的时候，我们先通过哈希函数计算出这个数据的HashCode，然后再根据HashCode来决定这个数据要存到的位置，
+采用头插法（JDK1.7以前）/尾插法（JDK1.8以后）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></details><details class="custom-block details"><summary>TreeSet（二叉树）</summary><p><a href="https://blog.csdn.net/qq_39396275/article/details/76409089" target="_blank" rel="noopener noreferrer">自然排序与定制排序<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ul><li>可以按照添加对象的指定属性，进行排序。</li> <li>TreeSet 继承于AbstractSet，所以它是一个Set集合，具有Set的属性和方法。</li> <li>基于TreeMap实现的。TreeSet中的元素支持2种排序方式：自然排序 或者 根据创建TreeSet 时提供的 Comparator 进行排序。</li> <li>TreeSet是非同步的。 它的iterator 方法返回的迭代器是fail-fast的。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>TreeSet的构造函数：
+TreeSet() //默认构造函数。使用该构造函数，TreeSet中的元素按照自然排序进行排列。
+TreeSet(Collection&lt;? extends E&gt; collection) //创建的TreeSet包含collection
+TreeSet(Comparator&lt;? super E&gt; comparator) //指定TreeSet的比较器
+TreeSet(SortedSet&lt;E&gt; set) //创建的TreeSet包含set
+
+TreeSet:
+1.自然排序中，比较两个对象是否相同的标准为：compareTo()返回0.不再是equals().
+2.定制排序中，比较两个对象是否相同的标准为：compare()返回0.不再是equals().
+
+使用说明:
+1.向TreeSet中添加的数据，要求是相同类的对象。
+2.两种排序方式：自然排序（实现Comparable接口 和 定制排序（Comparator）
+
+概念：
+1.TreeSet()是使用二叉树的原理对新 add()的对象按照指定的顺序排序（升序、降序），每增
+加一个对象都会进行排序，将对象插入的二叉树指定的位置。
+2. Integer 和 String 对象都可以进行默认的 TreeSet 排序，而自定义类的对象是不可以的，自
+己定义的类必须实现 Comparable 接口，并且覆写相应的 compareTo()函数，才可以正常使
+用。
+3. 在覆写 compare()函数时，要返回相应的值才能使 TreeSet 按照一定的规则来排序
+4. 比较此对象与指定对象的顺序。如果该对象小于、等于或大于指定对象，则分别返回负整
+数、零或正整数。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><details class="custom-block details"><summary>方式一：自然排序</summary><div class="language- line-numbers-mode"><pre class="language-text"><code> public void test1(){
+        TreeSet set = new TreeSet();
+        //失败：不能添加不同类的对象
+//        set.add(123);
+//        set.add(456);
+//        set.add(&quot;AA&quot;);
+//        set.add(new User(&quot;Tom&quot;,12));
+
+            //举例一：
+//        set.add(34);
+//        set.add(-34);
+//        set.add(43);
+//        set.add(11);
+//        set.add(8);
+
+ //举例二：
+        set.add(new User(&quot;Tom&quot;,12));
+        set.add(new User(&quot;Jerry&quot;,32));
+        set.add(new User(&quot;Jim&quot;,2));
+        set.add(new User(&quot;Mike&quot;,65));
+        set.add(new User(&quot;Jack&quot;,33));
+        set.add(new User(&quot;Jack&quot;,56));
+		
+		Iterator iterator = set.iterator();
+	    while(iterator.hasNext()){
+		    System.out.println(iterator.next());
+		}
+		
+ }
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div></details></details><details class="custom-block details"><summary>方式二：定制排序</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>public void test2(){
+        Comparator com = new Comparator() {
+            //照年龄从小到大排列
+            @Override
+            public int compare(Object o1, Object o2) {
+                if(o1 instanceof User &amp;&amp; o2 instanceof User){
+                    User u1 = (User)o1;
+                    User u2 = (User)o2;
+                    return Integer.compare(u1.getAge(),u2.getAge());
+                }else{
+                    throw new RuntimeException(&quot;输入的数据类型不匹配&quot;);
+                }
+            }
+        };
+
+        TreeSet set = new TreeSet(com);
+        set.add(new User(&quot;Tom&quot;,12));
+        set.add(new User(&quot;Jerry&quot;,32));
+        set.add(new User(&quot;Jim&quot;,2));
+        set.add(new User(&quot;Mike&quot;,65));
+        set.add(new User(&quot;Mary&quot;,33));
+        set.add(new User(&quot;Jack&quot;,33));
+        set.add(new User(&quot;Jack&quot;,56));
+
+
+        Iterator iterator = set.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div></details><details class="custom-block details"><summary>LinkHashSet（HashSet+LinkedHashMap）</summary><ul><li>继承与 HashSet、又基于 LinkedHashMap 来实现的,对于频繁的遍历操作，LinkedHashSet效率高于HashSet.</li> <li>遍历其内部数据时，可以按照添加的顺序遍历，在添加数据的同时，每个数据还维护了两个引用，记录此数据前一个数据和后一个数据。</li> <li>HashSet和HashMap都不保证顺序，LinkHashSet能保证顺序，和默认插入的顺序一致。</li> <li>特点：底层是一个哈希表（数组+链表、红黑树）+链表。多了一条链表（记录元素的存储顺序），保证元素有序。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>对于 LinkedHashSet 而言，它继承与 HashSet、又基于 LinkedHashMap 来实现的。
+LinkedHashSet 底层使用 LinkedHashMap 来保存所有元素，它继承与 HashSet，其所有的方法
+操作上又与 HashSet 相同，因此 LinkedHashSet 的实现上非常简单，只提供了四个构造方法，并
+通过传递一个标识参数，调用父类的构造器，底层构造一个 LinkedHashMap 来实现，在相关操
+作上与父类 HashSet 的操作相同，直接调用父类 HashSet 的方法即可。
+
+重点：LinkedHashSet继承自HashSet，源码更少、更简单，唯一的区别是LinkedHashSet内部使用的是LinkHashMap。
+这样做的意义或者好处就是LinkedHashSet中的元素顺序是可以保证的，也就是说遍历序和插入序是一致的。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></details><h3 id="queue"><a href="#queue" class="header-anchor">#</a> Queue</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>Queue用于模拟队列这种数据结构。队列通常是指“先进先出（FIFO）”的容器。
+队列的头部保存在队列中存放时间最长的元素，尾部保存存放时间最短的元素。
+新元素插入到队列的尾部，取出元素会返回队列头部的元素。
+通常，队列不允许随机访问队列中的元素。
+
+常用方法：
+void add(Object e):　　将指定元素插入到队列的尾部。
+object element():　　获取队列头部的元素，但是不删除该元素。
+boolean offer(Object e):　　将指定的元素插入此队列的尾部。当使用容量有限的队列时，此方法通常比add(Object e)有效。　
+Object peek():　　返回队列头部的元素，但是不删除该元素。如果队列为空，则返回null。
+Object poll():　　返回队列头部的元素，并删除该元素。如果队列为空，则返回null。
+Object remove():　　获取队列头部的元素，并删除该元素。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="map"><a href="#map" class="header-anchor">#</a> Map</h2> <ul><li>是映射表最基本的接口</li> <li>常用方法</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>* 添加：put(Object key,Object value)
+* 删除：remove(Object key)
+* 修改：put(Object key,Object value)
+* 查询：get(Object key)
+* 长度：size()
+* 遍历：keySet() / values() / entrySet()
+
+&gt;Map中的key:无序的、不可重复的，使用Set存储所的key  ---&gt; key所在的类要重写equals()和hashCode() （以HashMap为例)
+&gt;Map中的value:无序的、可重复的，使用Collection存储所的value ---&gt;value所在的类要重写equals()
+&gt; 一个键值对：key-value构成了一个Entry对象。
+&gt;Map中的entry:无序的、不可重复的，使用Set存储所的entry
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p><img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/image-20210706171239539.png" alt=""> <img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/d6b65eb6bb566e83ac01b366cb8a742c.png" alt=""></p> <h3 id="hashmap"><a href="#hashmap" class="header-anchor">#</a> HashMap</h3> <ul><li>作为Map的主要实现类；线程不安全的，效率高；存储null的key和value</li> <li>HashMap的底层：数组+链表  （jdk7及之前)
+<img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/2021-07-06_172025.png" alt="JDK1.7之前的HashMap原理图解"></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>大方向上，HashMap 里面是一个数组，然后数组中每个元素是一个单向链表。
+上图中，每个绿色的实体是嵌套类 Entry 的实例，Entry 包含四个属性：key, value, hash 值和用于单向链表的 next。
+
+实现原理：
+*      在实例化以后，底层创建了长度是16的一维数组Entry[] table。
+*      ...可能已经执行过多次put...
+*      map.put(key1,value1):
+*      首先，调用key1所在类的hashCode()计算key1哈希值，此哈希值经过某种算法计算以后，得到在Entry数组中的存放位置。
+*      如果此位置上的数据为空，此时的key1-value1添加成功。 ----情况1
+*      如果此位置上的数据不为空，(意味着此位置上存在一个或多个数据(以链表形式存在)),比较key1和已经存在的一个或多个数据的哈希值：
+*              如果key1的哈希值与已经存在的数据的哈希值都不相同，此时key1-value1添加成功。----情况2
+*              如果key1的哈希值和已经存在的某一个数据(key2-value2)的哈希值相同，继续比较：调用key1所在类的equals(key2)方法，比较：
+*                      如果equals()返回false:此时key1-value1添加成功。----情况3
+*                      如果equals()返回true:使用value1替换value2。
+*
+*      补充：关于情况2和情况3：此时key1-value1和原来的数据以链表的方式存储。
+*
+*     在不断的添加过程中，会涉及到扩容问题，当超出临界值(且要存放的位置非空)时，扩容。默认的扩容方式：扩容为原来容量的2倍，并将原的数据复制过来。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><ul><li>数组+链表+红黑树 （jdk 8)
+<img src="https://gitee.com/li-wen-kai/picgo/raw/8f24847756dcd61ac0529a7a8220a6aae5d18778/img/2021-07-06_172250.png" alt=""></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>Java8 对 HashMap 进行了一些修改，最大的不同就是利用了红黑树，所以其由数组+链表+红黑树组成。
+根据 Java7 HashMap 的介绍，我们知道，查找的时候，根据 hash 值我们能够快速定位到数组的具体下标，
+但是之后的话，需要顺着链表一个个比较下去才能找到我们需要的，时间复杂度取决于链表的长度，为 O(n)。
+为了降低这部分的开销，在 Java8 中，当链表中的元素超过了 8 个以后，会将链表转换为红黑树，
+在这些位置进行查找的时候可以降低时间复杂度为 O(logN)。
+
+
+实现原理：
+1. new HashMap():底层没创建一个长度为16的数组
+2. jdk 8底层的数组是：Node[],而非Entry[]
+3. 首次调用put()方法时，底层创建长度为16的数组
+4. jdk7底层结构只：数组+链表。jdk8中底层结构：数组+链表+红黑树。
+4.1 形成链表时，七上八下（jdk7:新的元素指向旧的元素。jdk8：旧的元素指向新的元素）
+4.2 当数组的某一个索引位置上的元素以链表形式存在的数据个数 &gt; 8 且当前数组的长度 &gt; 64时，此时此索引位置上的所数据改为使用红黑树存储。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h4 id="linkhashmap的底层实现原理"><a href="#linkhashmap的底层实现原理" class="header-anchor">#</a> LinkHashMap的底层实现原理</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>LinkedHashMap底层使用的结构与HashMap相同，因为LinkedHashMap继承于HashMap.
+区别就在于：LinkedHashMap内部提供了Entry，替换HashMap中的Node.
+
+LinkedHashMap 是 HashMap 的一个子类，保存了记录的插入顺序，在用 Iterator 遍历
+LinkedHashMap 时，先得到的记录肯定是先插入的，也可以在构造时带参数，按照访问次序排序。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="hashtable"><a href="#hashtable" class="header-anchor">#</a> Hashtable</h3> <ul><li>线程安全的，效率低；不能存储null的key和value4</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>Hashtable 不建议在新代码中使用，不需要线程安全
+的场合可以用 HashMap 替换，需要线程安全的场合可以用 ConcurrentHashMap 替换。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="properties"><a href="#properties" class="header-anchor">#</a> Properties</h4> <ul><li>常用来处理配置文件。key和value都是String类型</li></ul> <h3 id="treemap"><a href="#treemap" class="header-anchor">#</a> TreeMap</h3> <ul><li>保证照添加的key-value对进行排序，实现排序遍历。此时考虑key的自然排序或定制排序</li> <li>底层使用红黑树</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>TreeMap 实现 SortedMap 接口，能够把它保存的记录根据键排序，默认是按键值的升序排序，
+也可以指定排序的比较器，当用 Iterator 遍历 TreeMap 时，得到的记录是排过序的。
+如果使用排序的映射，建议使用 TreeMap。
+在使用 TreeMap 时，key 必须实现 Comparable 接口或者在构造 TreeMap 传入自定义的
+Comparator，否则会在运行时抛出 java.lang.ClassCastException 类型的异常。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id=""><a href="#" class="header-anchor">#</a></h3> <h2 id="collections工具类"><a href="#collections工具类" class="header-anchor">#</a> Collections工具类</h2> <p>1.作用：操作Collection和Map的工具类
+2.常用方法：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>reverse(List)：反转 List 中元素的顺序
+shuffle(List)：对 List 集合元素进行随机排序
+sort(List)：根据元素的自然顺序对指定 List 集合元素升序排序
+sort(List，Comparator)：根据指定的 Comparator 产生的顺序对 List 集合元素进行排序
+swap(List，int， int)：将指定 list 集合中的 i 处元素和 j 处元素进行交换
+Object max(Collection)：根据元素的自然顺序，返回给定集合中的最大元素
+Object max(Collection，Comparator)：根据 Comparator 指定的顺序，返回给定集合中的最大元素
+Object min(Collection)
+Object min(Collection，Comparator)
+int frequency(Collection，Object)：返回指定集合中指定元素的出现次数
+void copy(List dest,List src)：将src中的内容复制到dest中
+boolean replaceAll(List list，Object oldVal，Object newVal)：使用新值替换 List 对象的所旧值
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ul><li>说明：ArrayList和HashMap都是线程不安全的，如果程序要求线程安全，我们可以将ArrayList、HashMap转换为线程的。</li> <li>使用synchronizedList(List list） 和 synchronizedMap(Map map）</li></ul> <h2 id="集合面试题："><a href="#集合面试题：" class="header-anchor">#</a> 集合面试题：</h2> <details class="custom-block details"><summary>常见的集合有哪些?</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>集合分为两大类：Collection和Map
+Collection接口的子接口包括：Set接口和List接口
+Map接口的实现类主要有：HashMap、TreeMap、Hashtable、ConcurrentHashMap以及Properties等
+Set接口的实现类主要有：HashSet、TreeSet、LinkedHashSet等
+List接口的实现类主要有：ArrayList、LinkedList、Stack以及Vector等
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></details><details class="custom-block details"><summary>常见集合底层实现</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>List：
+   1）ArrayList底层：数组
+   2）LinkList底层：双向链表
+Set：
+   1）HashSet底层是HashMap，数组+链表+红黑树
+   2）LinkedHashSet底层是LinkedHashMap。
+   3）TreeSet底层是TreeMap。
+Map：
+   1）HashMap底层与HashTable原理相同，Java8版本以后如果同一位置哈希冲突大于8则链表变成红黑树。
+   2）HashTable底层：链地址法组成的哈希表（即数组+单项链表组成）。
+   3）LinkedHashMap底层修改自HashMap，包含一个维护插入顺序的双向链表。
+   4）TreeMap底层是红黑树。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></details><details class="custom-block details"><summary>Collection与Collections有什么区别？</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>Collection是一个接口，包含了一些集合的基本操作，继承这个接口主要有List和Set以及Queue
+Collections是一个工具类,提供了一系列静态方法，对各种集合实现排序、搜索、线程安全化等的操作
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></details><details class="custom-block details"><summary>List、Set、Map之间的区别？</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>List:存储的元素是有序的、可重复的
+Set:存储的元素是无序的（根据哈希值存数据）、不可重复的
+Map:使用键值对（key-value）进行存储数据,一个key-value构成了一个Entry对象。
+采用set进行存储key，
+采用collection存储value,
+采用set存储entry	
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></details><details class="custom-block details"><summary>HashMap与HashTable有什么区别？</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>1.底层： 
+JDK1.8以前的，相同，都是采用数组+链表，数组是主体，链表则是主要为了解决哈希冲突而存在的
+JDK1.8 以后的 HashMap 在解决哈希冲突时有了较大的变化，当链表长度大于阈值（默认为 8）（将链表转换成红黑树前会判断，如果当前数组的长度小于 64，那么会选择先进行数组扩容，而不是转换为红黑树）时，将链表转化为红黑树，以减少搜索时间。
+Hashtable 没有这样的机制。
+
+2.初始容量大小和每次扩容大小的不同 
+ ① 创建时如果不指定容量初始值，Hashtable 默认的初始大小为 11，之后每次扩充，容量变为原来的 2n+1。HashMap 默认的初始化大小为 16。之后每次扩充，容量变为原来的 2 倍。
+ ② 创建时如果给定了容量初始值，那么 Hashtable 会直接使用你给定的大小，而 HashMap 会将其扩充为 2 的幂次方大小
+3.对 Null key 和 Null value 的支持
+HashMap 可以存储 null 的 key 和 value，但 null 作为键只能有一个，null 作为值可以有多个；HashTable 不允许有 null 键和 null 值，否则会抛出 NullPointerException。
+
+4.线程是否安全
+HashMap是非线程安全，Hashtable是线程安全的，因为Hashtable内部的方法基本都被synchronized修饰（若是保证线程安全就使用concurrentHashMap）
+
+5.效率
+因为线程安全的问题，HashMap 要比 HashTable 效率高一点。另外，HashTable 基本被淘汰，不要在代码中使用它；
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div></details><details class="custom-block details"><summary>HashMap和TreeMap的区别？</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>TreeMap&lt;K,V&gt;的Key值是要求实现java.lang.Comparable，所以迭代的时候TreeMap默认是按照Key值升序排序的；TreeMap的实现是基于红黑树结构。适用于按自然顺序或自定义顺序遍历键（key）。
+HashMap&lt;K,V&gt;的Key值实现散列hashCode()，分布是散列的、均匀的，不支持排序；数据结构主要是桶(数组)，链表或红黑树。适用于在Map中插入、删除和定位元素。
+
+HashMap： 基于哈希表实现。使用HashMap要求添加的键类明确定义了hashCode()和equals()[可以重写hashCaode()和equals()]，为了优化HashMap空间的使用，您可以调优初始容量和负载因子。
+TreeMap： 基于红黑树实现。TreeMap没有调优选项，因为该树总处于平衡状态。
+
+如果你需要得到一个有序的结果时就应该使用TreeMap（因为HashMap中元素的排列顺序是不固定的）。除此之外，由于HashMap有更好的性能，所以大多不需要排序的时候我们会使用HashMap。
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></details><details class="custom-block details"><summary>说一下HashMap的实现原理</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>HashMap是基于hashing的原理，我们使用put(key, value)存储对象到HashMap中，使用get(key)从HashMap中获取对象。
+当我们给put()方法传递键和值时，我们先对键调用hashCode()方法，返回的hashCode用于找到bucket位置来储存Entry对象。”
+这里关键点在于指出，HashMap是在bucket中储存键对象和值对象，作为Map.Entry。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>HashCode相同会发生什么？</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>Hashcode相同，并不能说明这两个对象相等，
+Hashcode相同，只能说明这两个对象位于这个数组的同一个位置，这一个位置又是采用链表存储对象，这两个对象都在这个链表中
+
+因为hashcode相同，所以它们的bucket位置相同，‘碰撞’会发生。
+因为HashMap使用LinkedList存储对象，这个Entry(包含有键值对的Map.Entry对象)会存储在LinkedList中。
+(当向 HashMap 中添加 key-value 对，由其 key 的 hashCode() 返回值决定该 key-value 对（就是 Entry 对象）的存储位置。
+当两个 Entry 对象的 key 的 hashCode() 返回值相同时，将由 key 通过 eqauls() 比较值决定是采用覆盖行为（返回 true），还是产生 Entry 链（返回 false）。)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>两个键的hashcode相同，你如何获取值对象？</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>当我们调用get()方法，HashMap会使用键对象的hashcode找到bucket位置，然后获取值对象。
+如果有两个值对象储存在同一个bucket，将会遍历LinkedList直到找到值对象。
+找到bucket位置之后，会调用keys.equals()方法去找到LinkedList中正确的节点，最终找到要找的值对象。
+(当程序通过 key 取出对应 value 时，系统只要先计算出该 key 的 hashCode() 返回值，在根据该 hashCode 返回值找出该 key 在 table 数组中的索引，然后取出该索引处的 Entry，最后返回该 key 对应的 value 即可。)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>如果HashMap的大小超过了负载因子(load factor)定义的容量，怎么办？</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>当一个map填满了75%的bucket时候，和其它集合类(如ArrayList等)一样，将会创建原来HashMap大小的两倍的bucket数组，来重新调整map的大小，并将原来的对象放入新的bucket数组中。
+这个过程叫作rehashing，因为它调用hash方法找到新的bucket位置。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></details><details class="custom-block details"><summary>说一下HashSet的实现原理？</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>实现了Set接口，具备了Set集合的特性，不可重复、无序性
+
+Set中最重要的一个操作就是查找。而且通常我们会选择HashSet来实现，因为它专门对快速查找进行了优化。
+HashSet使用的是散列函数，那么它当中的元素也就无序可寻。当中是允许元素为null的。
+
+总结：
+（1）基于HashMap实现的，默认构造函数是构建一个初始容量为16，负载因子为0.75 的HashMap。封装了一个 HashMap 对象来存储所有的集合元素，所有放入 HashSet 中的集合元素实际上由 HashMap 的 key 来保存，而 HashMap 的 value 则存储了一个 PRESENT，它是一个静态的 Object 对象。
+（2）当我们试图把某个类的对象当成 HashMap的 key，或试图将这个类的对象放入 HashSet 中保存时，重写该类的equals(Object obj)方法和 hashCode() 方法很重要，而且这两个方法的返回值必须保持一致：当该类的两个的 hashCode() 返回值相同时，它们通过 equals() 方法比较也应该返回 true。通常来说，所有参与计算 hashCode() 返回值的关键属性，都应该用于作为 equals() 比较的标准。
+（3）HashSet的其他操作都是基于HashMap的。
+
+它是基于HashMap实现的，HashSet底层使用HashMap来保存所有元素，因此HashSet 的实现比较简单，相关HashSet的操作，基本上都是直接调用底层HashMap的相关方法来完成，
+import java.util.AbstractSet;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Set;
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+public class HashSet&lt;E&gt;  extends AbstractSet&lt;E&gt;  implements Set&lt;E&gt;, Cloneable, java.io.Serializable  {  
+static final long serialVersionUID = -5024744406713321676L;  
+// 底层使用HashMap来保存HashSet中所有元素。  
+private transient HashMap&lt;E,Object&gt; map;  
+// 定义一个虚拟的Object对象作为HashMap的value，将此对象定义为static final。  
+private static final Object PRESENT = new Object();  
+//  默认的无参构造器，构造一个空的HashSet。 
+//  实际底层会初始化一个空的HashMap，并使用默认初始容量为16和加载因子0.75。 
+public HashSet() {  
+map = new HashMap&lt;E,Object&gt;();  
+}  
+//  构造一个包含指定collection中的元素的新set。 
+//  实际底层使用默认的加载因子0.75和足以包含指定 
+//  collection中所有元素的初始容量来创建一个HashMap。 
+//  @param c 其中的元素将存放在此set中的collection。 
+public HashSet(Collection&lt;? extends E&gt; c) {  
+map = new HashMap&lt;E,Object&gt;(Math.max((int) (c.size()/.75f) + 1, 16));  
+addAll(c);  
+}  
+//  以指定的initialCapacity和loadFactor构造一个空的HashSet。 
+//  
+//  实际底层以相应的参数构造一个空的HashMap。 
+// @param initialCapacity 初始容量。 
+//  @param loadFactor 加载因子。 
+
+public HashSet(int initialCapacity, float loadFactor) {  
+map = new HashMap&lt;E,Object&gt;(initialCapacity, loadFactor);  
+}  
+
+ 
+//  以指定的initialCapacity构造一个空的HashSet。 
+//  
+//  实际底层以相应的参数及加载因子loadFactor为0.75构造一个空的HashMap。 
+//  @param initialCapacity 初始容量。 
+ 
+public HashSet(int initialCapacity) {  
+map = new HashMap&lt;E,Object&gt;(initialCapacity);  
+}  
+
+
+//  以指定的initialCapacity和loadFactor构造一个新的空链接哈希集合。 
+//  此构造函数为包访问权限，不对外公开，实际只是是对LinkedHashSet的支持。 
+//  
+//  实际底层会以指定的参数构造一个空LinkedHashMap实例来实现。 
+//  @param initialCapacity 初始容量。 
+//  @param loadFactor 加载因子。 
+//  @param dummy 标记。 
+   
+HashSet(int initialCapacity, float loadFactor, boolean dummy) {  
+map = new LinkedHashMap&lt;E,Object&gt;(initialCapacity, loadFactor);  
+}  
+
+ 
+//  返回对此set中元素进行迭代的迭代器。返回元素的顺序并不是特定的。 
+//  
+// 底层实际调用底层HashMap的keySet来返回所有的key。 
+//  可见HashSet中的元素，只是存放在了底层HashMap的key上， 
+//  value使用一个static final的Object对象标识。 
+//  @return 对此set中元素进行迭代的Iterator。 
+
+ public Iterator&lt;E&gt; iterator() {  
+     return map.keySet().iterator();  
+
+}  
+ 
+// 返回此set中的元素的数量（set的容量）。 
+//  
+//  底层实际调用HashMap的size()方法返回Entry的数量，就得到该Set中元素的个数。 
+//  @return 此set中的元素的数量（set的容量）。 
+  
+public int size() {  
+return map.size();  
+}  
+
+ 
+//  如果此set不包含任何元素，则返回true。 
+//  
+//  底层实际调用HashMap的isEmpty()判断该HashSet是否为空。 
+//  @return 如果此set不包含任何元素，则返回true。 
+ 
+public boolean isEmpty() {  
+return map.isEmpty();  
+}  
+
+ 
+//  如果此set包含指定元素，则返回true。 
+//  更确切地讲，当且仅当此set包含一个满足(o==null ? e==null : o.equals(e)) 
+//  的e元素时，返回true。 
+// 
+//  底层实际调用HashMap的containsKey判断是否包含指定key。 
+// @param o 在此set中的存在已得到测试的元素。 
+// @return 如果此set包含指定元素，则返回true。 
+  
+public boolean contains(Object o) {  
+return map.containsKey(o);  
+}  
+
+
+// 如果此set中尚未包含指定元素，则添加指定元素。 
+// 更确切地讲，如果此 set 没有包含满足(e==null ? e2==null : e.equals(e2)) 
+// 的元素e2，则向此set 添加指定的元素e。 
+// 如果此set已包含该元素，则该调用不更改set并返回false。 
+// 
+// 底层实际将将该元素作为key放入HashMap。 
+// 由于HashMap的put()方法添加key-value对时，当新放入HashMap的Entry中key 
+//与集合中原有Entry的key相同（hashCode()返回值相等，通过equals比较也返回true）， 
+//新添加的Entry的value会将覆盖原来Entry的value，但key不会有任何改变， 
+//  因此如果向HashSet中添加一个已经存在的元素时，新添加的集合元素将不会被放入HashMap中， 
+//  原来的元素也不会有任何改变，这也就满足了Set中元素不重复的特性。 
+//  @param e 将添加到此set中的元素。 
+//  @return 如果此set尚未包含指定元素，则返回true。 
+ 
+public boolean add(E e) {  
+       return map.put(e, PRESENT)==null;  
+}  
+
+//  如果指定元素存在于此set中，则将其移除。 
+//  更确切地讲，如果此set包含一个满足(o==null ? e==null : o.equals(e))的元素e， 
+//  则将其移除。如果此set已包含该元素，则返回true 
+// （或者：如果此set因调用而发生更改，则返回true）。（一旦调用返回，则此set不再包含该元素）。 
+//  
+//  底层实际调用HashMap的remove方法删除指定Entry。 
+//  @param o 如果存在于此set中则需要将其移除的对象。 
+//  @return 如果set包含指定元素，则返回true。 
+ 
+public boolean remove(Object o) {  
+return map.remove(o)==PRESENT;  
+}  
+
+ 
+//  从此set中移除所有元素。此调用返回后，该set将为空。 
+//  
+//  底层实际调用HashMap的clear方法清空Entry中所有元素。 
+ 
+public void clear() {  
+map.clear();  
+}  
+ 
+//  返回此HashSet实例的浅表副本：并没有复制这些元素本身。 
+
+//  底层实际调用HashMap的clone()方法，获取HashMap的浅表副本，并设置到HashSet中。 
+ 
+public Object clone() {  
+    try {  
+        HashSet&lt;E&gt; newSet = (HashSet&lt;E&gt;) super.clone();  
+        newSet.map = (HashMap&lt;E, Object&gt;) map.clone();  
+        return newSet;  
+    } catch (CloneNotSupportedException e) {  
+        throw new InternalError();  
+    }  
+}  
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br></div></div></details><details class="custom-block details"><summary>ArrayList和LinkedList的区别是什么？</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>1.底层：ArrayList底层是动态数组，LinkedList底层是双向链表（JDK1.6之前为循环链表，JDK1.7取消了循环）
+2.效率：
+      ArrayList访问元素速度优于LinkedList，
+      LinkedList占用的内存空间比较大，但LinkedList在批量插入或删除数据时优于ArrayList。
+  说明：
+	ArrayList 采用数组存储，所以插入和删除元素的时间复杂度受元素位置的影响。 比如：执行add(E e)方法的时候， ArrayList 会默认在将指定的元素追加到此列表的末尾，这种情况时间复杂度就是 O(1)。但是如果要在指定位置 i 插入和删除元素的话（add(int index, E element)）时间复杂度就为 O(n-i)。因为在进行上述操作的时候集合中第 i 和第 i 个元素之后的(n-i)个元素都要执行向后位/向前移一位的操作。
+    LinkedList 采用链表存储，所以，如果是在头尾插入或者删除元素不受元素位置的影响（add(E e)、addFirst(E e)、addLast(E e)、removeFirst() 、 removeLast()），近似 O(1)，如果是要在指定位置 i 插入和删除元素的话（add(int index, E element)，remove(Object o)） 时间复杂度近似为 O(n) ，因为需要先移动到指定位置再插入
+3.线程安全：都是线程不安全的
+4.快速随机访问：LinkedList 不支持高效的随机元素访问，而 ArrayList 支持。快速随机访问就是通过元素的序号快速获取元素对象(对应于get(int index)方法)。
+5.内存：ArrayList 的空间浪费主要体现在在 list 列表的结尾会预留一定的容量空间，而 LinkedList 的空间花费则体现在它的每一个元素都需要消耗比 ArrayList 更多的空间（因为要存放直接后继和直接前驱以及数据）。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></details><details class="custom-block details"><summary>如何实现数组和List之间的转换？</summary><ul><li>List转换为数组：调用ArrayList的toArray方法</li> <li>数组转换为List：调用Arrays的asList方法</li></ul></details><details class="custom-block details"><summary>ArrayList和Vector的区别有什么？</summary><ul><li>Vector是同步的，而ArrayList不是。然而，如果你寻求在迭代的时候对列表进行改变，你应该使用CopyOnWriteArrayList。</li> <li>ArrayList比Vector快，它因为有同步，不会过载。</li> <li>ArrayList更加通用，因为我们可以使用Collections工具类轻易地获取同步列表和只读列表。</li></ul></details><details class="custom-block details"><summary>Array和ArrayList有什么区别？</summary><ul><li>Array可以容纳基本类型和对象，而ArrayList只能容纳对象。</li> <li>Array是指定大小的，而ArrayList大小是固定的。</li> <li>Array没有提供ArrayList那么多功能，比如addAll、removeAll和iterator等。</li></ul></details><details class="custom-block details"><summary>在 Queue 中 poll()和 remove()有什么区别？</summary><ul><li>poll() 和 remove() 都是从队列中取出一个元素，</li> <li>但是 poll() 在获取元素失败的时候会返回空，但是 remove() 失败的时候会抛出异常。</li></ul></details><details class="custom-block details"><summary>哪些集合类是线程安全的？</summary><ul><li>vector：就比arraylist多了个同步化机制（线程安全），因为效率较低，现在已经不太建议使用。在web应用中，特别是前台页面，往往效率（页面响应速度）是优先考虑的。</li> <li>statck：堆栈类，先进后出。</li> <li>hashtable：就比hashmap多了个线程安全。</li> <li>enumeration：枚举，相当于迭代器。</li></ul></details><details class="custom-block details"><summary>迭代器 Iterator 是什么？</summary><ul><li>迭代器是一种设计模式，它是一个对象，它可以遍历并选择序列中的对象，而开发人员不需要了解该序列的底层结构。</li> <li>迭代器通常被称为“轻量级”对象，因为创建它的代价小。</li></ul></details><details class="custom-block details"><summary>Iterator 怎么使用？有什么特点？</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>Java中的Iterator功能比较简单，并且只能单向移动：
+(1) 使用方法iterator()要求容器返回一个Iterator。第一次调用Iterator的next()方法时，它返回序列的第一个元素。注意：iterator()方法是java.lang.Iterable接口,被Collection继承。
+(2) 使用next()获得序列中的下一个元素。
+(3) 使用hasNext()检查序列中是否还有元素。
+(4) 使用remove()将迭代器新返回的元素删除。
+Iterator是Java迭代器最简单的实现，为List设计的ListIterator具有更多的功能，它可以从两个方向遍历List，也可以从List中插入和删除元素。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></details><details class="custom-block details"><summary>Iterator 和 ListIterator 有什么区别？</summary><ul><li>Iterator可用来遍历Set和List集合，但是ListIterator只能用来遍历List。</li> <li>Iterator对集合只能是前向遍历，ListIterator既可以前向也可以后向。</li> <li>ListIterator实现了Iterator接口，并包含其他的功能，比如：增加元素，替换元素，获取前一个和后一个元素的索引，等等。</li></ul></details><details class="custom-block details"><summary>怎么确保一个集合不能被修改？</summary><ul><li>可以使用Collections. unmodifiableCollection(Collectionc) 方法来创建一个只读集合，这样任何改变集合的操作都会抛出异常。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>用Collections的
+unmodifiableCollection（Collection c）
+unmodifiableList（List list）
+unmodifiableSet（Set set）
+unmodifiableMap（Map map）
+方法创建只读的集合。
+任何修改操作都会抛出UnsupportedOperationException
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></details></div> <footer class="page-edit" style="display:none;"><div class="edit-link"><a href="https://github.com/kai-max/edit/master/docs/views/Interview/JavaSE高级/java集合-lwk.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> <!----> <div class="article-list" data-v-2af88190><div class="article-title" data-v-2af88190><a href="/timeline/" class="iconfont icon-shizhong" data-v-2af88190>最近更新</a></div> <div class="article-wrapper" data-v-2af88190><dl data-v-2af88190><dd data-v-2af88190>01</dd> <dt data-v-2af88190><a href="/views/Interview/%E7%BB%83%E4%B9%A0/%E9%9B%86%E5%90%88/java-02.html" data-v-2af88190><div data-v-2af88190>java集合框架常见面试题</div></a> <span data-v-2af88190>07-12</span></dt></dl><dl data-v-2af88190><dd data-v-2af88190>02</dd> <dt data-v-2af88190><a href="/views/Interview/JavaSE%E9%AB%98%E7%BA%A7/java%E5%A4%9A%E7%BA%BF%E7%A8%8B-lwk.html" data-v-2af88190><div data-v-2af88190>Java多线程</div></a> <span data-v-2af88190>07-08</span></dt></dl><dl data-v-2af88190><dd data-v-2af88190>03</dd> <dt data-v-2af88190><a href="/views/Interview/%E7%BB%83%E4%B9%A0/%E5%9F%BA%E7%A1%80/java-01.html" data-v-2af88190><div data-v-2af88190>java基础练习</div></a> <span data-v-2af88190>07-08</span></dt></dl></div> <div data-v-2af88190><a href="/timeline/" class="article-more" data-v-2af88190>更多文章 &gt;</a></div></div></main> <!----> <div class="comments-wrapper" data-v-584a622c><div class="valine-wrapper"><div id="valine"></div></div></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-a81d141e data-v-a81d141e><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a81d141e><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a81d141e></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a81d141e></path></svg></div><!----><div data-v-48108b4c><div class="DetailsOpenFlag" style="right:1rem;bottom:9rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;font-size:14px;font-weight:500;display:none;" data-v-48108b4c>
+ 展开 
+
+</div></div><div id="musicPlayer" data-v-0584ea4d><!----> <div class="bbox" data-v-0584ea4d><div class="pan" style="background-image:url(/assets/img/pan.07613e22.png);" data-v-0584ea4d><img src="" alt class="pan_c" data-v-0584ea4d></div> <div class="box" style="background-image:url();" data-v-0584ea4d><div class="music_shlter_2" style="background-image:url();" data-v-0584ea4d></div> <div class="music_shlter" style="background-image:url();" data-v-0584ea4d></div> <div class="music_shlter_3" data-v-0584ea4d></div> <div class="music_dis" data-v-0584ea4d><div class="dis_list" data-v-0584ea4d>···</div> <p class="music_title" data-v-0584ea4d></p> <p class="music_intro" data-v-0584ea4d>歌手: </p> <ul class="music_words" data-v-0584ea4d><div class="music_words_box" style="top:0px;" data-v-0584ea4d></div></ul></div> <div class="control_box" data-v-0584ea4d><div class="control_button" data-v-0584ea4d><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAACMCAYAAACksC0pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALjSURBVHhe7doxbuswFETRSG68pVTZ+y+SJdmVE/GDC0hzBxnynoqpBGhIaoy84/vyBnu9Xv9ut9vH/HN5j8fj836/v88/Mc/n8+uca9RxHPgm2VUkwN2kNux4TiTA65Y+5nIL53m+5hI1nuMJLGeAgKu0xW42AwQEiv1/10bJBLhhC0198z2BBFtoueUC3I0BlkvdOLZQyGiHc4myhXJsoc2CG9YWSkgFeJ6nJYZgCy1nCy23XIC7tVBPYL/YhjVAwGiHc4mK/Uc+daX8FbZQ/YrfQEhqpGIwQEDqkzE2SiTA3X5GJHkCAcuVmN1aqIO95ZIb1gABqQD9GQG5XuxcsRyp4KSuUE8gwRZabrkAd2OA5Wyh5Rzs7WcLbRbcsLZQQipAB3shttByttByywW4Wwv1BPaLbVgDBDjYW84WWs5vYLnkjWOAgFSADvYuwBMISG1YWyhkvNi5RNlCIZaYcqkAx3MMEHC92LliOVLBSV2hnkBCasPGSowtlGELLWeAEFtoOQd7+9lCmwU3rC2UkApwjG54AgGpAG2hEFtoueUC3K2FegL7xTasAQJGO5xLlCMVEFtoOb+B5ZI3jgECUgE62LsATyAgtWFtoRBHKspZYsqlAhzPMUDA9WLniuVIBSd1hXoCCakNGysxtlCGLbScAUJsoeUc7O1nC20W3LC2UEIqwDG64QkEpAK0hUJsoeWWC3C3FuoJ7BfbsAYIGO1wLlGOVEBsoeX8BpZL3jgGCEgF6GDvAjyBgOVKzG4tNDVSEfsZsRtLTLlUgOM5Bgi4XuxcsRyp4KSuUE8gwRZabrkAd2OA5Wyh5Rzs7WcLbRbcsLZQQipAB3shttByttByywW4Wwv1BPaLbVgDBDjYW84Wql/xGwgZ85pziTNAQOqT4WDvAjyBgOVKzG4t1MHecskNa4CAVID+jIBcL3auWI5UcFJXqCeQYAstt1yAuzHAcrbQcg729rOFNstt2LfvHxY+GuRFc4rhAAAAAElFTkSuQmCC" alt class="control_icon" data-v-0584ea4d></div> <div class="progress" data-v-0584ea4d><div class="progress_c" style="width:0%;" data-v-0584ea4d><div class="progress_circle" data-v-0584ea4d><div class="progress_circle_c" data-v-0584ea4d></div></div></div></div></div></div> <video id="music" autoplay="autoplay" src="" name="media" data-v-0584ea4d></video></div></div><!----></div></div>
+    <script src="/assets/js/app.905c73bd.js" defer></script><script src="/assets/js/5.6d8b57f8.js" defer></script><script src="/assets/js/1.1422e221.js" defer></script><script src="/assets/js/2.95e401c1.js" defer></script><script src="/assets/js/39.fbccefa6.js" defer></script><script src="/assets/js/20.75d616fd.js" defer></script>
+  </body>
+</html>

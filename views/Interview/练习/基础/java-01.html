@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>java基础练习 | 理想与现实</title>
+    <meta name="description" content="学习如逆水行舟，不进则退。">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="https://infinitypro-img.infinitynewtab.com/custom-icon/8001de1jd3n68lbfnxxt564xvb0vl5.png?imageMogr2/thumbnail/240x/format/webp/blur/1x0/quality/100|imageslim">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <script language="javascript" type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
+  <script language="javascript" type="text/javascript" src="/js/MouseClickEffect.js"></script>
+    
+    <link rel="preload" href="/assets/css/0.styles.751c9989.css" as="style"><link rel="preload" href="/assets/js/app.905c73bd.js" as="script"><link rel="preload" href="/assets/js/5.6d8b57f8.js" as="script"><link rel="preload" href="/assets/js/1.1422e221.js" as="script"><link rel="preload" href="/assets/js/2.95e401c1.js" as="script"><link rel="preload" href="/assets/js/50.0eb648ed.js" as="script"><link rel="preload" href="/assets/js/20.75d616fd.js" as="script"><link rel="prefetch" href="/assets/js/10.9200e9c9.js"><link rel="prefetch" href="/assets/js/100.fb111b27.js"><link rel="prefetch" href="/assets/js/101.19d260dd.js"><link rel="prefetch" href="/assets/js/102.4eb39868.js"><link rel="prefetch" href="/assets/js/103.93ef0837.js"><link rel="prefetch" href="/assets/js/104.0482ec3b.js"><link rel="prefetch" href="/assets/js/105.109b7ccd.js"><link rel="prefetch" href="/assets/js/106.4be03f58.js"><link rel="prefetch" href="/assets/js/107.9837dbee.js"><link rel="prefetch" href="/assets/js/108.58cb99f2.js"><link rel="prefetch" href="/assets/js/109.d9d5a517.js"><link rel="prefetch" href="/assets/js/11.63d461fa.js"><link rel="prefetch" href="/assets/js/110.97cea850.js"><link rel="prefetch" href="/assets/js/111.46e893c9.js"><link rel="prefetch" href="/assets/js/112.ea295982.js"><link rel="prefetch" href="/assets/js/113.59820563.js"><link rel="prefetch" href="/assets/js/114.50d6c3ce.js"><link rel="prefetch" href="/assets/js/12.dba8b982.js"><link rel="prefetch" href="/assets/js/13.251e5535.js"><link rel="prefetch" href="/assets/js/14.a8128e57.js"><link rel="prefetch" href="/assets/js/15.e69cbd44.js"><link rel="prefetch" href="/assets/js/16.2783313a.js"><link rel="prefetch" href="/assets/js/17.6bfa5b0a.js"><link rel="prefetch" href="/assets/js/18.238d246a.js"><link rel="prefetch" href="/assets/js/19.67e51aad.js"><link rel="prefetch" href="/assets/js/21.860e8f52.js"><link rel="prefetch" href="/assets/js/22.b69e6181.js"><link rel="prefetch" href="/assets/js/23.b2057436.js"><link rel="prefetch" href="/assets/js/24.44436173.js"><link rel="prefetch" href="/assets/js/25.5167071b.js"><link rel="prefetch" href="/assets/js/26.078d334d.js"><link rel="prefetch" href="/assets/js/27.541dbcfa.js"><link rel="prefetch" href="/assets/js/28.e693ca32.js"><link rel="prefetch" href="/assets/js/29.b112986c.js"><link rel="prefetch" href="/assets/js/30.009265fb.js"><link rel="prefetch" href="/assets/js/31.c684c005.js"><link rel="prefetch" href="/assets/js/32.6e80119e.js"><link rel="prefetch" href="/assets/js/33.a801325c.js"><link rel="prefetch" href="/assets/js/34.8d48f944.js"><link rel="prefetch" href="/assets/js/35.b0434f7c.js"><link rel="prefetch" href="/assets/js/36.33ac9bd4.js"><link rel="prefetch" href="/assets/js/37.d6adb25b.js"><link rel="prefetch" href="/assets/js/38.1413d862.js"><link rel="prefetch" href="/assets/js/39.fbccefa6.js"><link rel="prefetch" href="/assets/js/40.7b803087.js"><link rel="prefetch" href="/assets/js/41.438d8ed7.js"><link rel="prefetch" href="/assets/js/42.68b69a78.js"><link rel="prefetch" href="/assets/js/43.1d0ff059.js"><link rel="prefetch" href="/assets/js/44.05a3f7fd.js"><link rel="prefetch" href="/assets/js/45.d6addb46.js"><link rel="prefetch" href="/assets/js/46.12a7af33.js"><link rel="prefetch" href="/assets/js/47.4f5187e1.js"><link rel="prefetch" href="/assets/js/48.be4109a6.js"><link rel="prefetch" href="/assets/js/49.141c7c0e.js"><link rel="prefetch" href="/assets/js/51.a4b05c45.js"><link rel="prefetch" href="/assets/js/52.8f145245.js"><link rel="prefetch" href="/assets/js/53.9b4cca64.js"><link rel="prefetch" href="/assets/js/54.55c9f6cf.js"><link rel="prefetch" href="/assets/js/55.acd0deda.js"><link rel="prefetch" href="/assets/js/56.94fc933d.js"><link rel="prefetch" href="/assets/js/57.3dc568b8.js"><link rel="prefetch" href="/assets/js/58.3bb73c10.js"><link rel="prefetch" href="/assets/js/59.a6e25c05.js"><link rel="prefetch" href="/assets/js/6.84cf4e0b.js"><link rel="prefetch" href="/assets/js/60.d585e757.js"><link rel="prefetch" href="/assets/js/61.85e2222d.js"><link rel="prefetch" href="/assets/js/62.d7ef5ff8.js"><link rel="prefetch" href="/assets/js/63.b007545c.js"><link rel="prefetch" href="/assets/js/64.184071c0.js"><link rel="prefetch" href="/assets/js/65.89984d6a.js"><link rel="prefetch" href="/assets/js/66.2e5b0d73.js"><link rel="prefetch" href="/assets/js/67.6d06a15f.js"><link rel="prefetch" href="/assets/js/68.5d9b81aa.js"><link rel="prefetch" href="/assets/js/69.1e226a88.js"><link rel="prefetch" href="/assets/js/7.b690701e.js"><link rel="prefetch" href="/assets/js/70.96d7a3d0.js"><link rel="prefetch" href="/assets/js/71.ccb6f789.js"><link rel="prefetch" href="/assets/js/72.d6a2843f.js"><link rel="prefetch" href="/assets/js/73.5b029b58.js"><link rel="prefetch" href="/assets/js/74.70dfa2b2.js"><link rel="prefetch" href="/assets/js/75.a991dab7.js"><link rel="prefetch" href="/assets/js/76.20c8c2e6.js"><link rel="prefetch" href="/assets/js/77.66f200c0.js"><link rel="prefetch" href="/assets/js/78.503e93cc.js"><link rel="prefetch" href="/assets/js/79.d32c8eb6.js"><link rel="prefetch" href="/assets/js/8.9add0480.js"><link rel="prefetch" href="/assets/js/80.d0f17ccb.js"><link rel="prefetch" href="/assets/js/81.b67b1479.js"><link rel="prefetch" href="/assets/js/82.821bc008.js"><link rel="prefetch" href="/assets/js/83.94dce256.js"><link rel="prefetch" href="/assets/js/84.eb8d4fe6.js"><link rel="prefetch" href="/assets/js/85.058b5b70.js"><link rel="prefetch" href="/assets/js/86.76e98f3d.js"><link rel="prefetch" href="/assets/js/87.e4bcfa95.js"><link rel="prefetch" href="/assets/js/88.7a9d1eb7.js"><link rel="prefetch" href="/assets/js/89.45c2021f.js"><link rel="prefetch" href="/assets/js/9.34c16ada.js"><link rel="prefetch" href="/assets/js/90.59bd22cf.js"><link rel="prefetch" href="/assets/js/91.1ad00ce5.js"><link rel="prefetch" href="/assets/js/92.7488fe9e.js"><link rel="prefetch" href="/assets/js/93.d6f5bba5.js"><link rel="prefetch" href="/assets/js/94.7ea52b7f.js"><link rel="prefetch" href="/assets/js/95.6bb24157.js"><link rel="prefetch" href="/assets/js/96.6591ca93.js"><link rel="prefetch" href="/assets/js/97.37d6e280.js"><link rel="prefetch" href="/assets/js/98.6a29559c.js"><link rel="prefetch" href="/assets/js/99.0dcec499.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.70881dc9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.751c9989.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-584a622c><div data-v-584a622c><div id="loader-wrapper" class="loading-wrapper" data-v-4b73742e data-v-584a622c data-v-584a622c><div class="loader-main" data-v-4b73742e><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-70f93d87 data-v-584a622c data-v-584a622c><h3 class="title" style="display:none;" data-v-70f93d87 data-v-70f93d87>理想与现实</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-70f93d87 data-v-70f93d87><input type="password" value="" data-v-70f93d87> <span style="width:auto;" data-v-70f93d87>过去无法挽回，未来可以改变！</span> <button data-v-70f93d87>OK</button></label> <div class="footer" style="display:none;" data-v-70f93d87 data-v-70f93d87><span data-v-70f93d87><i class="iconfont reco-theme" data-v-70f93d87></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-70f93d87>vuePress-theme-reco</a></span> <span data-v-70f93d87><i class="iconfont reco-copyright" data-v-70f93d87></i> <a data-v-70f93d87><span data-v-70f93d87>kai-max</span>
+            
+          <span data-v-70f93d87>2021 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-584a622c><header class="navbar" data-v-584a622c><div title="导航" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">理想与现实</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index.html" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/WEB/" class="nav-link"><i class="iconfont undefined"></i>
+  WEB
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JAVA/" class="nav-link"><i class="iconfont undefined"></i>
+  JAVA
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/categories/软考/" class="nav-link"><i class="iconfont undefined"></i>
+  软考
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/总结/" class="nav-link"><i class="iconfont undefined"></i>
+  总结
+</a></li><li class="dropdown-item"><!----> <a href="/categories/相关/" class="nav-link"><i class="iconfont undefined"></i>
+  相关
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      其它
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Projects🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  My Project
+</a></li></ul></li><li class="dropdown-item"><h4>Common sites🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/friends.html" class="nav-link"><i class="iconfont undefined"></i>
+  友 链
+</a></li><li class="dropdown-subitem"><a href="https://docs.oracle.com/javase/8/docs/api/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Java SE API Documentation
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.programcreek.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Program Creek
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Stackoverflow
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://leetcode-cn.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.bootcdn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  BootCDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.linuxcool.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Linux命令大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  编程语言排行榜
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于我
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-584a622c></div> <aside class="sidebar" data-v-584a622c><div class="personal-info-wrapper" data-v-7e653f02><img src="/vuepress/head-fish.jpg" alt="author-avatar" class="personal-img" data-v-7e653f02> <h3 class="name" data-v-7e653f02>
+    kai-max
+  </h3> <div class="num" data-v-7e653f02><div data-v-7e653f02><h3 data-v-7e653f02>87</h3> <h6 data-v-7e653f02>文章</h6></div> <div data-v-7e653f02><h3 data-v-7e653f02>32</h3> <h6 data-v-7e653f02>标签</h6></div></div> <hr data-v-7e653f02></div> <nav class="nav-links"><div class="nav-item"><a href="/index.html" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/WEB/" class="nav-link"><i class="iconfont undefined"></i>
+  WEB
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JAVA/" class="nav-link"><i class="iconfont undefined"></i>
+  JAVA
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随笔/" class="nav-link"><i class="iconfont undefined"></i>
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/categories/软考/" class="nav-link"><i class="iconfont undefined"></i>
+  软考
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/总结/" class="nav-link"><i class="iconfont undefined"></i>
+  总结
+</a></li><li class="dropdown-item"><!----> <a href="/categories/相关/" class="nav-link"><i class="iconfont undefined"></i>
+  相关
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      其它
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Projects🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  My Project
+</a></li></ul></li><li class="dropdown-item"><h4>Common sites🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/other/friends.html" class="nav-link"><i class="iconfont undefined"></i>
+  友 链
+</a></li><li class="dropdown-subitem"><a href="https://docs.oracle.com/javase/8/docs/api/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Java SE API Documentation
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.programcreek.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Program Creek
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Stackoverflow
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://leetcode-cn.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.bootcdn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  BootCDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.linuxcool.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Linux命令大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  编程语言排行榜
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于我
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/views/" class="sidebar-link">概览</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>java基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>规范 Standard</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端 Front-end</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>后端 Back-end</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>随笔 Essay</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他 Blog</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>软考</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试题</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>查漏补缺</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试题练习</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-70f93d87 data-v-584a622c><h3 class="title" style="display:none;" data-v-70f93d87 data-v-70f93d87>java基础练习</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-70f93d87 data-v-70f93d87><input type="password" value="" data-v-70f93d87> <span style="width:auto;" data-v-70f93d87>过去无法挽回，未来可以改变！</span> <button data-v-70f93d87>OK</button></label> <div class="footer" style="display:none;" data-v-70f93d87 data-v-70f93d87><span data-v-70f93d87><i class="iconfont reco-theme" data-v-70f93d87></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-70f93d87>vuePress-theme-reco</a></span> <span data-v-70f93d87><i class="iconfont reco-copyright" data-v-70f93d87></i> <a data-v-70f93d87><span data-v-70f93d87>kai-max</span>
+            
+          <span data-v-70f93d87>2021 - </span>
+          2021
+        </a></span></div></div> <div data-v-584a622c><main class="page"><!----> <div class="page-title" style="display:none;"><h1>java基础练习</h1> <hr> <div data-v-7b2e794a><i class="iconfont reco-account" data-v-7b2e794a><span data-v-7b2e794a>kai-max</span></i> <i class="iconfont reco-date" data-v-7b2e794a><span data-v-7b2e794a>2021-07-08</span></i> <i class="iconfont reco-eye" data-v-7b2e794a><span id="/views/Interview/%E7%BB%83%E4%B9%A0/%E5%9F%BA%E7%A1%80/java-01.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-7b2e794a><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-7b2e794a><span class="tag-item" data-v-7b2e794a>
+      Java
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p></p><div class="table-of-contents"><ul><li><a href="#基础概念与常识">基础概念与常识</a><ul><li><a href="#java语言的特点">java语言的特点</a></li><li><a href="#jvm、jdk、jre">JVM、JDK、JRE</a></li><li><a href="#java和c-的区别？">java和c++的区别？</a></li><li><a href="#import-java和javax有什么区别">import java和javax有什么区别</a></li></ul></li><li><a href="#基本语法">基本语法</a><ul><li><a href="#字符常量和字符串常量的区别？">字符常量和字符串常量的区别？</a></li><li><a href="#注释">注释</a></li><li><a href="#标识符和关键字的区别是什么？">标识符和关键字的区别是什么？</a></li><li><a href="#自增自减运算符">自增自减运算符</a></li><li><a href="#continue、break、和-return-的区别是什么？">continue、break、和 return 的区别是什么？</a></li><li><a href="#java-泛型了解么？什么是类型擦除？介绍一下常用的通配符？">Java 泛型了解么？什么是类型擦除？介绍一下常用的通配符？</a></li><li><a href="#和-equals-的区别">==和 equals 的区别?</a></li><li><a href="#hashcode-与-equals">hashCode()与 equals()</a></li></ul></li><li><a href="#基本数据类型">基本数据类型</a><ul><li><a href="#java-中的几种基本数据类型是什么？对应的包装类型是什么？各自占用多少字节呢？">Java 中的几种基本数据类型是什么？对应的包装类型是什么？各自占用多少字节呢？</a></li><li><a href="#自动装箱与拆箱">自动装箱与拆箱</a></li></ul></li><li><a href="#方法">方法</a><ul><li><a href="#什么是方法的返回值">什么是方法的返回值?</a></li><li><a href="#方法有哪几种类型？">方法有哪几种类型？</a></li><li><a href="#在一个静态方法内调用一个非静态成员为什么是非法的">在一个静态方法内调用一个非静态成员为什么是非法的?</a></li><li><a href="#静态方法和实例方法有何不同？">静态方法和实例方法有何不同？</a></li><li><a href="#为什么-java-中只有值传递？">为什么 Java 中只有值传递？</a></li><li><a href="#重载和重写的区别？">重载和重写的区别？</a></li></ul></li><li><a href="#java面向对象">java面向对象</a><ul><li><a href="#面向对象和面向过程的区别？">面向对象和面向过程的区别？</a></li><li><a href="#成员变量与局部变量的区别有哪些？">成员变量与局部变量的区别有哪些？</a></li><li><a href="#创建一个对象用什么运算符-对象实体与对象引用有何不同">创建一个对象用什么运算符?对象实体与对象引用有何不同?</a></li><li><a href="#对象的相等与指向他们的引用相等-两者有什么不同">对象的相等与指向他们的引用相等,两者有什么不同?</a></li><li><a href="#一个类的构造方法的作用是什么-若一个类没有声明构造方法，该程序能正确执行吗-为什么">一个类的构造方法的作用是什么? 若一个类没有声明构造方法，该程序能正确执行吗? 为什么?</a></li><li><a href="#构造方法有哪些特点？是否可被-override">构造方法有哪些特点？是否可被 override?</a></li><li><a href="#面向对象三大特征">面向对象三大特征</a></li><li><a href="#string-stringbuffer-和-stringbuilder-的区别是什么-string-为什么是不可变的">String StringBuffer 和 StringBuilder 的区别是什么? String 为什么是不可变的?</a></li><li><a href="#object-类的常见方法总结">Object 类的常见方法总结</a></li></ul></li><li><a href="#反射">反射</a><ul><li><a href="#何为反射？">何为反射？</a></li><li><a href="#反射机制优缺点">反射机制优缺点</a></li><li><a href="#反射的应用场景">反射的应用场景</a></li></ul></li><li><a href="#异常">异常</a><ul><li><a href="#java-异常类层次结构图">Java 异常类层次结构图</a></li><li><a href="#throwable-类常用方法">Throwable 类常用方法</a></li><li><a href="#try-catch-finally">try-catch-finally</a></li></ul></li><li><a href="#i-o流">I/O流</a><ul><li><a href="#什么是序列化-什么是反序列化">什么是序列化?什么是反序列化?</a></li><li><a href="#java-序列化中如果有些字段不想进行序列化，怎么办？">Java 序列化中如果有些字段不想进行序列化，怎么办？</a></li><li><a href="#获取用键盘输入常用的两种方法">获取用键盘输入常用的两种方法</a></li><li><a href="#java-中-io-流分为几种">Java 中 IO 流分为几种?</a></li><li><a href="#既然有了字节流-为什么还要有字符流">既然有了字节流,为什么还要有字符流?</a></li></ul></li></ul></div><p></p> <h2 id="基础概念与常识"><a href="#基础概念与常识" class="header-anchor">#</a> 基础概念与常识</h2> <h3 id="java语言的特点"><a href="#java语言的特点" class="header-anchor">#</a> java语言的特点</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token number">1.</span>简单易学
+<span class="token number">2.</span>面向对象（封装、继承、多态、抽象）
+<span class="token number">3.</span>平台无关（jvm来实现可移植性，平台无关性）
+<span class="token number">4.</span>支持多线程（c<span class="token operator">++</span>语言没有内置的多线程机制，java语言提供了多线程的支持）
+<span class="token number">5.</span>可靠性
+<span class="token number">6.</span>安全性
+<span class="token number">7.</span>支持网络编程（ <span class="token class-name">Java</span> 语言诞生本身就是为简化网络编程设计的，因此 <span class="token class-name">Java</span> 语言不仅支持网络编程而且很方便）
+<span class="token number">8.</span>编译和解释并存
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="jvm、jdk、jre"><a href="#jvm、jdk、jre" class="header-anchor">#</a> JVM、JDK、JRE</h3> <details class="custom-block details"><summary>JVM</summary><ul><li>JVM是运行java字节码的虚拟机。JVM有针对不同系统的特定实现（Windows、Linux、macOS），目的是使用相同的字节码，都会给出相同的结果。</li></ul> <div class="language-java line-numbers-mode"><pre class="language-java"><code>在java中，jvm可以理解的代码就叫做字节码（即扩展名为<span class="token punctuation">.</span><span class="token keyword">class</span>文件），它不面向任何特定的处理器，只面向虚拟机。
+<span class="token class-name">Java</span> 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言可移植的特点。
+所以 <span class="token class-name">Java</span> 程序运行时比较高效，而且，由于字节码并不针对一种特定的机器，因此，<span class="token class-name">Java</span> 程序无须重新编译便可在多种不同操作系统的计算机上运行。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>java程序从源代码到运行一般有下面3步：
+<img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210709161829.png" alt="运行过程"></li></ul> <div class="language-java line-numbers-mode"><pre class="language-java"><code>了解：
+我们需要格外注意的是 <span class="token punctuation">.</span><span class="token keyword">class</span><span class="token operator">-&gt;</span>机器码 这一步。
+在这一步 JVM 类加载器首先加载字节码文件，然后通过解释器逐行解释执行，这种方式的执行速度会相对比较慢。
+而且，有些方法和代码块是经常需要被调用的<span class="token punctuation">(</span>也就是所谓的热点代码<span class="token punctuation">)</span>，所以后面引进了 JIT 编译器，而 JIT 属于运行时编译。
+当 JIT 编译器完成第一次编译后，其会将字节码对应的机器码保存下来，下次可以直接使用。
+而我们知道，机器码的运行效率肯定是高于 <span class="token class-name">Java</span> 解释器的。
+这也解释了我们为什么经常会说 <span class="token class-name">Java</span> 是编译与解释共存的语言。
+
+<span class="token class-name">HotSpot</span> 采用了惰性评估<span class="token punctuation">(</span><span class="token class-name">Lazy</span> <span class="token class-name">Evaluation</span><span class="token punctuation">)</span>的做法，根据二八定律，消耗大部分系统资源的只有那一小部分的代码（热点代码），而这也就是 JIT 所需要编译的部分。
+JVM 会根据代码每次被执行的情况收集信息并相应地做出一些优化，因此执行的次数越多，它的速度就越快。
+JDK <span class="token number">9</span> 引入了一种新的编译模式 <span class="token function">AOT</span><span class="token punctuation">(</span><span class="token class-name">Ahead</span> of <span class="token class-name">Time</span> <span class="token class-name">Compilation</span><span class="token punctuation">)</span>，它是直接将字节码编译成机器码，这样就避免了 JIT 预热等各方面的开销。
+JDK 支持分层编译和 AOT 协作使用。
+但是 ，AOT 编译器的编译质量是肯定比不上 JIT 编译器的。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p><strong>总结</strong></p> <ul><li>Java 虚拟机（JVM）是运行 Java 字节码的虚拟机。JVM 有针对不同系统的特定实现（Windows，Linux，macOS），目的是使用相同的字节码，它们都会给出相同的结果。</li> <li>字节码和不同系统的 JVM 实现是 Java 语言“一次编译，随处可以运行”的关键所在。</li></ul></details><details class="custom-block details"><summary>JDK</summary><ul><li>JDK 是 Java Development Kit 缩写，它是功能齐全的 Java SDK。</li> <li>它拥有 JRE 所拥有的一切，还有编译器（javac）和工具（如 javadoc 和 jdb）。它能够创建和编译程序。</li></ul></details><details class="custom-block details"><summary>JRE</summary><ul><li>JRE 是 Java 运行时环境。它是运行已编译 Java 程序所需的所有内容的集合，包括 Java 虚拟机（JVM），Java 类库，java 命令和其他的一些基础构件。但是，它不能用于创建新程序。</li></ul></details><div class="language-java line-numbers-mode"><pre class="language-java"><code>如果你只是为了运行一下 <span class="token class-name">Java</span> 程序的话，那么你只需要安装 JRE 就可以了。
+如果你需要进行一些 <span class="token class-name">Java</span> 编程方面的工作，那么你就需要安装 JDK 了。但是，这不是绝对的。
+有时，即使您不打算在计算机上进行任何 <span class="token class-name">Java</span> 开发，仍然需要安装 JDK。
+例如，如果要使用 JSP 部署 <span class="token class-name">Web</span> 应用程序，那么从技术上讲，您只是在应用程序服务器中运行 <span class="token class-name">Java</span> 程序。
+那你为什么需要 JDK 呢？
+因为应用程序服务器会将 JSP 转换为 <span class="token class-name">Java</span> servlet，并且需要使用 JDK 来编译 servlet。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="java和c-的区别？"><a href="#java和c-的区别？" class="header-anchor">#</a> java和c++的区别？</h3> <ul><li>都是面向对象的语言，都支持封装、继承和多态</li> <li>Java 不提供指针来直接访问内存，程序内存更加安全</li> <li>Java 的类是单继承的，C++ 支持多重继承；虽然 Java 的类不可以多继承，但是接口可以多继承(实现)。</li> <li>Java 有自动内存管理垃圾回收机制(GC)，不需要程序员手动释放无用内存。</li> <li>C ++同时支持方法重载和操作符重载，但是 Java 只支持方法重载（操作符重载增加了复杂性，这与 Java 最初的设计思想不符）。</li></ul> <h3 id="import-java和javax有什么区别"><a href="#import-java和javax有什么区别" class="header-anchor">#</a> import java和javax有什么区别</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code>刚开始的时候 <span class="token class-name">JavaAPI</span> 所必需的包是 java 开头的包，javax 当时只是扩展 API 包来使用。
+然而随着时间的推移，javax 逐渐地扩展成为 <span class="token class-name">Java</span> API 的组成部分。
+但是，将扩展从 javax 包移动到 java 包确实太麻烦了，最终会破坏一堆现有的代码。
+因此，最终决定 javax 包将成为标准 API 的一部分。
+	
+所以，实际上 java 和 javax 没有区别。这都是一个名字。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="基本语法"><a href="#基本语法" class="header-anchor">#</a> 基本语法</h2> <h3 id="字符常量和字符串常量的区别？"><a href="#字符常量和字符串常量的区别？" class="header-anchor">#</a> 字符常量和字符串常量的区别？</h3> <ul><li>形式 : 字符常量是单引号引起的一个字符，字符串常量是双引号引起的 0 个或若干个字符</li> <li>含义 : 字符常量相当于一个整型值( ASCII 值),可以参加表达式运算; 字符串常量代表一个地址值(该字符串在内存中存放位置)</li> <li>占内存大小 ： 字符常量只占 2 个字节; 字符串常量占若干个字节 (注意： char 在 Java 中占两个字节)
+<strong>字符封装类 Character 有一个成员常量 Character.SIZE 值为 16,单位是bits,该值除以 8(1byte=8bits)后就可以得到 2 个字节</strong> <img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210710160328.jpeg" alt="基本数据类型以及包装类"></li></ul> <h3 id="注释"><a href="#注释" class="header-anchor">#</a> 注释</h3> <ul><li>单行注释</li> <li>多行注释</li> <li>文档注释</li></ul> <h3 id="标识符和关键字的区别是什么？"><a href="#标识符和关键字的区别是什么？" class="header-anchor">#</a> 标识符和关键字的区别是什么？</h3> <ul><li>标识符就是一个名字</li></ul> <div class="language-java line-numbers-mode"><pre class="language-java"><code>起源：编写程序的时候，需要大量地为程序、类、变量、方法等取名字，于是就有了标识符
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>关键字（Java语言已经赋予了其特殊的含义，只能用于特定的地方，这种特殊的标识符）
+| 访问控制             | private  | protected  | public   |              |            |           |        |
+| -------------------- | -------- | ---------- | -------- | ------------ | ---------- | --------- | ------ |
+| 类，方法和变量修饰符 | abstract | class      | extends  | final        | implements | interface | native |
+|                      | new      | static     | strictfp | synchronized | transient  | volatile  |        |
+| 程序控制             | break    | continue   | return   | do           | while      | if        | else   |
+|                      | for      | instanceof | switch   | case         | default    |           |        |
+| 错误处理             | try      | catch      | throw    | throws       | finally    |           |        |
+| 包相关               | import   | package    |          |              |            |           |        |
+| 基本类型             | boolean  | byte       | char     | double       | float      | int       | long   |
+|                      | short    | null       | true     | false        |            |           |        |
+| 变量引用             | super    | this       | void     |              |            |           |        |
+| 保留字               | goto     | const      |          |              |            |           |        |</li></ul> <h3 id="自增自减运算符"><a href="#自增自减运算符" class="header-anchor">#</a> 自增自减运算符</h3> <ul><li>自增运算符（++)和自减运算符（--）</li> <li>当运算符放在变量之前时(前缀)，先自增/减，再赋值；当运算符放在变量之后时(后缀)，先赋值，再自增/减。</li></ul> <div class="language-java line-numbers-mode"><pre class="language-java"><code>例如，当 b <span class="token operator">=</span> <span class="token operator">++</span>a 时，先自增（自己增加 <span class="token number">1</span>），再赋值（赋值给 b）；
+当 b <span class="token operator">=</span> a<span class="token operator">++</span> 时，先赋值<span class="token punctuation">(</span>赋值给 b<span class="token punctuation">)</span>，再自增（自己增加 <span class="token number">1</span>）。
+也就是，<span class="token operator">++</span>a 输出的是 a<span class="token operator">+</span><span class="token number">1</span> 的值，a<span class="token operator">++</span>输出的是 a 值。
+用一句口诀就是：“符号在前就先加<span class="token operator">/</span>减，符号在后就后加<span class="token operator">/</span>减”。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="continue、break、和-return-的区别是什么？"><a href="#continue、break、和-return-的区别是什么？" class="header-anchor">#</a> continue、break、和 return 的区别是什么？</h3> <ul><li>continue ：指跳出当前的这一次循环，继续下一次循环。</li> <li>break ：指跳出整个循环体，继续执行循环下面的语句。</li> <li>return 用于跳出所在方法，结束该方法的运行。return 一般有两种用法：
+1.return; ：直接使用 return 结束方法执行，用于没有返回值函数的方法
+2.return value; ：return 一个特定值，用于有返回值函数的方法</li></ul> <h3 id="java-泛型了解么？什么是类型擦除？介绍一下常用的通配符？"><a href="#java-泛型了解么？什么是类型擦除？介绍一下常用的通配符？" class="header-anchor">#</a> Java 泛型了解么？什么是类型擦除？介绍一下常用的通配符？</h3> <ul><li>泛型是JDK5引入的一个新特性，泛型提供了编译时类型安全检测机制该机制允许程序员在编译时检测到非法的类型。</li> <li>泛型的本质是参数化类型，也就是说所操作的数据类型被指定为一个参数。</li> <li>Java 的泛型是伪泛型，这是因为 Java 在编译期间，所有的泛型信息都会被擦掉，这也就是通常所说类型擦除 。</li></ul> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//这里直接添加会报错</span>
+list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">List</span><span class="token punctuation">&gt;</span></span> clazz <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Method</span> add <span class="token operator">=</span> clazz<span class="token punctuation">.</span><span class="token function">getDeclaredMethod</span><span class="token punctuation">(</span><span class="token string">&quot;add&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//但是通过反射添加，是可以的</span>
+add<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>list<span class="token punctuation">,</span> <span class="token string">&quot;kl&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><ul><li>泛型一般有三种使用方式:泛型类、泛型接口、泛型方法。</li></ul> <details class="custom-block details"><summary>1.泛型类</summary><div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//此处T可以随便写为任意标识，常见的如T、E、K、V等形式的参数常用于表示泛型</span>
+<span class="token comment">//在实例化泛型类时，必须指定T的具体类型</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Generic</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">T</span> key<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Generic</span><span class="token punctuation">(</span><span class="token class-name">T</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>key <span class="token operator">=</span> key<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">T</span> <span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> key<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+实例化泛型类：
+<span class="token class-name">Generic</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> genericInteger <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Generic</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token number">123456</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div></details><details class="custom-block details"><summary>2.泛型接口</summary><div class="language-java line-numbers-mode"><pre class="language-java"><code>泛型接口：
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Generator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">T</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+两种方式实现泛型接口：
+<span class="token number">1</span>）实现泛型接口，不指定类型
+泛型接口实现类：
+<span class="token keyword">class</span> <span class="token class-name">GeneratorImpl</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">implements</span> <span class="token class-name">Generator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">T</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token number">2</span>）实现泛型接口，指定类型
+泛型接口实现类：
+<span class="token keyword">class</span> <span class="token class-name">GeneratorImpl</span> <span class="token keyword">implements</span> <span class="token class-name">Generator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div></details><details class="custom-block details"><summary>3.泛型方法：</summary><div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">void</span> <span class="token function">printArray</span><span class="token punctuation">(</span><span class="token class-name">E</span><span class="token punctuation">[</span><span class="token punctuation">]</span> inputArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">E</span> element <span class="token operator">:</span> inputArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%s &quot;</span><span class="token punctuation">,</span> element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>使用：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">// 创建不同类型数组： Integer, Double 和 Character</span>
+<span class="token class-name">Integer</span><span class="token punctuation">[</span><span class="token punctuation">]</span> intArray <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> stringArray <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">&quot;Hello&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;World&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">printArray</span><span class="token punctuation">(</span>intArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">printArray</span><span class="token punctuation">(</span>stringArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></details><ul><li>常用的通配符为： T，E，K，V，？</li></ul> <div class="language-java line-numbers-mode"><pre class="language-java"><code>？ 表示不确定的 java 类型
+<span class="token class-name">T</span> <span class="token punctuation">(</span>type<span class="token punctuation">)</span> 表示具体的一个 java 类型
+<span class="token class-name">K</span> <span class="token class-name">V</span> <span class="token punctuation">(</span>key value<span class="token punctuation">)</span> 分别代表 java 键值中的 <span class="token class-name">Key</span> <span class="token class-name">Value</span>
+<span class="token class-name">E</span> <span class="token punctuation">(</span>element<span class="token punctuation">)</span> 代表 <span class="token class-name">Element</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="和-equals-的区别"><a href="#和-equals-的区别" class="header-anchor">#</a> ==和 equals 的区别?</h3> <ul><li>对于基本数据类型来说，==比较的是值。对于引用数据类型来说，==比较的是对象的内存地址。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>因为 Java 只有值传递，所以，对于 == 来说，不管是比较基本数据类型，还是引用数据类型的变量，其本质比较的都是值，只是引用类型变量存的值是对象的地址。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>equals() 作用不能用于判断基本数据类型的变量，只能用来判断两个对象是否相等。equals()方法存在于Object类中，而Object类是所有类的直接或间接父类。</li></ul> <details class="custom-block details"><summary>Object 类 equals() 方法</summary><div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">==</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></details><p>equals() 方法存在两种使用情况：</p> <ul><li>类没有覆盖 equals()方法</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>通过equals()比较该类的两个对象时，等价于通过“==”比较这两个对象，使用的默认是 Object类equals()方法。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>类覆盖了 equals()方法</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>一般我们都覆盖 equals()方法来比较两个对象中的属性是否相等；若它们的属性相等，则返回 true(即，认为这两个对象相等)。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><details class="custom-block details"><summary>案例</summary><div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> test1 <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;ab&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// a 为一个引用</span>
+        <span class="token class-name">String</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;ab&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// b为另一个引用,对象的内容一样</span>
+        <span class="token class-name">String</span> aa <span class="token operator">=</span> <span class="token string">&quot;ab&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 放在常量池中</span>
+        <span class="token class-name">String</span> bb <span class="token operator">=</span> <span class="token string">&quot;ab&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 从常量池中查找</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>aa <span class="token operator">==</span> bb<span class="token punctuation">)</span> <span class="token comment">// true</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;aa==bb&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> b<span class="token punctuation">)</span> <span class="token comment">// false，非同一对象</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;a==b&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;aEQb&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">42</span> <span class="token operator">==</span> <span class="token number">42.0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// true</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;true&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p><strong>说明</strong></p> <ul><li>String中的equals方法是被重写过的，因为Object的equals方法是比较的对象的内存地址，而String的equals方法比较的是对象的值。</li> <li>当创建 String 类型的对象时，虚拟机会在常量池中查找有没有已经存在的值和要创建的值相同的对象，如果有就把它赋给当前引用。如果没有就在常量池中重新创建一个 String 对象。</li></ul></details><ul><li>String类的equals()方法：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>public boolean equals(Object anObject) {
+    if (this == anObject) {
+        return true;
+    }
+    if (anObject instanceof String) {
+        String anotherString = (String)anObject;
+        int n = value.length;
+        if (n == anotherString.value.length) {
+            char v1[] = value;
+            char v2[] = anotherString.value;
+            int i = 0;
+            while (n-- != 0) {
+                if (v1[i] != v2[i])
+                    return false;
+                i++;
+            }
+            return true;
+        }
+    }
+    return false;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="hashcode-与-equals"><a href="#hashcode-与-equals" class="header-anchor">#</a> hashCode()与 equals()</h3> <ul><li>你重写过 hashcode 和 equals么，为什么重写 equals 时必须重写 hashCode 方法？</li></ul> <ol><li>hashCode()介绍</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>hashCode() 的作用是获取哈希码，也称为散列码；
+它实际上是返回一个 int 整数。这个哈希码的作用是确定该对象在哈希表中的索引位置。
+hashCode()定义在 JDK 的 Object 类中，这就意味着 Java 中的任何类都包含有 hashCode() 函数。
+另外需要注意的是： Object 的 hashcode 方法是本地方法，也就是用 c 语言或 c++ 实现的，该方法通常用来将对象的内存地址转换为整数之后返回。
+
+public native int hashCode();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>散列表存储的是键值对(key-value)，它的特点是：能根据“键”快速的检索出对应的“值”。这其中就利用到了散列码！（可以快速找到所需要的对象
+2. 为什么要有 hashCode？</p> <ul><li>我们以“HashSet 如何检查重复”为例子来说明为什么要有 hashCode？</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>当你把对象加入到HashSet中，HashSet会先计算对象的hashcode的值来判断对象加入的位置同时也会与其他已经加入的对象的 hashcode 值作比较；
+1.如果没有相符的 hashcode，HashSet 会假设对象没有重复出现。
+2.如果发现有相同 hashcode 值的对象，这时会调用 equals() 方法来检查 hashcode 相等的对象是否真的相同。
+   2.1、如果两者相同，HashSet 就不会让其加入操作成功。
+   2.2、如果不同的话，就会重新散列到其他位置。
+   
+这样我们就大大减少了 equals 的次数，相应就大大提高了执行速度。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ol start="3"><li>为什么重写 equals 时必须重写 hashCode 方法？</li></ol> <ul><li>如果两个对象相等，则 hashcode 一定也是相同的。两个对象相等,对两个对象分别调用 equals 方法都返回 true。</li> <li>但是，两个对象有相同的 hashcode 值，它们也不一定是相等的 。因此，equals 方法被覆盖过，则 hashCode 方法也必须被覆盖。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>hashCode()的默认行为是对堆上的对象产生独特值。如果没有重写 hashCode()，则该 class 的两个对象无论如何都不会相等（即使这两个对象指向相同的数据）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="4"><li>为什么两个对象有相同的 hashcode 值，它们也不一定是相等的？</li></ol> <ul><li>因为 hashCode() 所使用的哈希算法也许刚好会让多个对象传回相同的哈希值。</li> <li>越糟糕的哈希算法越容易碰撞，但这也与数据值域分布的特性有关（所谓碰撞也就是指的是不同的对象得到相同的 hashCode。</li> <li>我们刚刚也提到了 HashSet,如果 HashSet 在对比的时候，同样的 hashcode 有多个对象，它会使用 equals() 来判断是否真的相同。</li> <li>也就是说 hashcode 只是用来缩小查找成本。</li></ul> <h2 id="基本数据类型"><a href="#基本数据类型" class="header-anchor">#</a> 基本数据类型</h2> <h3 id="java-中的几种基本数据类型是什么？对应的包装类型是什么？各自占用多少字节呢？"><a href="#java-中的几种基本数据类型是什么？对应的包装类型是什么？各自占用多少字节呢？" class="header-anchor">#</a> Java 中的几种基本数据类型是什么？对应的包装类型是什么？各自占用多少字节呢？</h3> <p>Java中有8种基本数据类型，分别为：</p> <blockquote><p>byte、short、int、long、float、double、boolean、char
+这8种基本数据类型的默认值以及所占空间的大小如下：
+| 基本类型  | 位数 | 字节 | 默认值  |
+| --------- | ---- | ---- | ------- |
+| <code>int</code>     | 32   | 4    | 0       |
+| <code>short</code>   | 16   | 2    | 0       |
+| <code>long</code>    | 64   | 8    | 0L      |
+| <code>byte</code>    | 8    | 1    | 0       |
+| <code>char</code>    | 16   | 2    | 'u0000' |
+| <code>float</code>   | 32   | 4    | 0f      |
+| <code>double</code>  | 64   | 8    | 0d      |
+| <code>boolean</code> | 1    |      | false   |</p></blockquote> <ul><li>另外，对于 boolean，官方文档未明确定义，它依赖于 JVM 厂商的具体实现。逻辑上理解是占用 1 位，但是实际中会考虑计算机高效存储因素。
+<strong>注意</strong></li></ul> <blockquote><p>八种基本数据类型对应的包装类分别为：Byte、Short、Integer、Long、Float、Double、Character、Boolean 。</p></blockquote> <ul><li>包装类型不赋值就是 Null ，而基本类型有默认值且不是 Null。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>另外，这个问题建议还可以先从 JVM 层面来分析。
+基本数据类型直接存放在 Java 虚拟机栈中的局部变量表中，而包装类型属于对象类型，我们知道对象实例都存在于堆中。
+相比于对象类型， 基本数据类型占用的空间非常小。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>局部变量表主要存放了编译期可知的基本数据类型**（boolean、byte、char、short、int、float、long、double）**、对象引用（reference 类型，
+它不同于对象本身，可能是一个指向对象起始地址的引用指针，也可能是指向一个代表对象的句柄或其他与此对象相关的位置）。</p></blockquote> <ul><li>Java 里使用 long 类型的数据一定要在数值后面加上 L，否则将作为整型解析。</li> <li>char a = 'h'char :单引号，String a = &quot;hello&quot; :双引号。</li></ul> <h3 id="自动装箱与拆箱"><a href="#自动装箱与拆箱" class="header-anchor">#</a> 自动装箱与拆箱</h3> <ul><li>装箱：将基本类型用它们对应的引用类型包装起来；</li> <li>拆箱：将包装类型转换为基本数据类型；</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>Integer i = 10;  //装箱
+int n = i;   //拆箱
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><details class="custom-block details"><summary>字节码文件</summary><div class="language- line-numbers-mode"><pre class="language-text"><code>   L1
+    LINENUMBER 8 L1
+    ALOAD 0
+    BIPUSH 10
+    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
+    PUTFIELD AutoBoxTest.i : Ljava/lang/Integer;
+   L2
+    LINENUMBER 9 L2
+    ALOAD 0
+    ALOAD 0
+    GETFIELD AutoBoxTest.i : Ljava/lang/Integer;
+    INVOKEVIRTUAL java/lang/Integer.intValue ()I
+    PUTFIELD AutoBoxTest.n : I
+    RETURN
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><blockquote><p>结论：从字节码中，我们发现装箱其实就是调用了包装类的valueOf()方法，拆箱其实就是调用了 xxxValue()方法。</p></blockquote></details><blockquote><p>总结：</p></blockquote> <ul><li>Integer i = 10 等价于 Integer i = Integer.valueOf(10)</li> <li>int n = i 等价于 int n = i.intValue();</li></ul> <h2 id="方法"><a href="#方法" class="header-anchor">#</a> 方法</h2> <h3 id="什么是方法的返回值"><a href="#什么是方法的返回值" class="header-anchor">#</a> 什么是方法的返回值?</h3> <blockquote><p>方法的返回值是指我们获取到的某个方法体中的代码执行后产生的结果！（前提是该方法可能产生结果）。返回值的作用是接收出结果，使得它可以用于其他的操作！</p></blockquote> <h3 id="方法有哪几种类型？"><a href="#方法有哪几种类型？" class="header-anchor">#</a> 方法有哪几种类型？</h3> <ol><li>无参数无返回值的方法</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 无参数无返回值的方法(如果方法没有返回值，不能不写，必须写void，表示没有返回值)
+public void f1() {
+    System.out.println(&quot;无参数无返回值的方法&quot;);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="2"><li>有参数无返回值的方法</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+* 有参数无返回值的方法
+* 参数列表由零组到多组“参数类型+形参名”组合而成，多组参数之间以英文逗号（,）隔开，形参类型和形参名之间以英文空格隔开
+*/
+public void f2(int a, String b, int c) {
+    System.out.println(a + &quot;--&gt;&quot; + b + &quot;--&gt;&quot; + c);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ol start="3"><li>有返回值无参数的方法</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 有返回值无参数的方法（返回值可以是任意的类型,在函数里面必须有return关键字返回对应的类型）
+public int f3() {
+    System.out.println(&quot;有返回值无参数的方法&quot;);
+    return 2;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="4"><li>有返回值有参数的方法</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 有返回值有参数的方法
+public int f4(int a, int b) {
+    return a * b;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="5"><li>return 在无返回值方法的特殊使用</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>// return在无返回值方法的特殊使用
+public void f5(int a) {
+    if (a &gt; 10) {
+        return;//表示结束所在方法 （f5方法）的执行,下方的输出语句不会执行
+    }
+    System.out.println(a);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="在一个静态方法内调用一个非静态成员为什么是非法的"><a href="#在一个静态方法内调用一个非静态成员为什么是非法的" class="header-anchor">#</a> 在一个静态方法内调用一个非静态成员为什么是非法的?</h3> <blockquote><p>静态方法是属于类的，在类加载的时候就会分配内存，可以通过类名直接访问。
+非静态成员属于实例对象，只有在对象实例化之后才存在，然后通过类的实例对象去访问。	
+在类的非静态成员不存在的时候静态成员就已经存在了，此时调用在内存中还不存在的非静态成员，属于非法操作。</p></blockquote> <h3 id="静态方法和实例方法有何不同？"><a href="#静态方法和实例方法有何不同？" class="header-anchor">#</a> 静态方法和实例方法有何不同？</h3> <ul><li>在外部调用静态方法时，可以使用&quot;类名.方法名&quot;的方式，也可以使用&quot;对象名.方法名&quot;的方式。而实例方法只有后面这种方式。
+<strong>调用静态方法可以无需创建对象。</strong></li> <li>静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。</li></ul> <h3 id="为什么-java-中只有值传递？"><a href="#为什么-java-中只有值传递？" class="header-anchor">#</a> 为什么 Java 中只有值传递？</h3> <ul><li>按值调用(call by value) 表示方法接收的是调用者提供的值，按引用调用（call by reference) 表示方法接收的是调用者提供的变量地址。</li> <li>一个方法可以修改传递引用所对应的变量值，而不能修改传递值调用所对应的变量值。</li></ul> <blockquote><p>Java 程序设计语言总是采用按值调用。也就是说，方法得到的是所有参数值的一个拷贝，也就是说，方法不能修改传递给它的任何参数变量的内容
+用三个案例来证实：</p></blockquote> <details class="custom-block details"><summary>案例一</summary><div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> num1 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> num2 <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+
+    <span class="token function">swap</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;num1 = &quot;</span> <span class="token operator">+</span> num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;num2 = &quot;</span> <span class="token operator">+</span> num2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">swap</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> temp <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    a <span class="token operator">=</span> b<span class="token punctuation">;</span>
+    b <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;a = &quot;</span> <span class="token operator">+</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;b = &quot;</span> <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+结果：
+a <span class="token operator">=</span> <span class="token number">20</span>
+b <span class="token operator">=</span> <span class="token number">10</span>
+num1 <span class="token operator">=</span> <span class="token number">10</span>
+num2 <span class="token operator">=</span> <span class="token number">20</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p><img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210710173046.jpeg" alt="解析"></p> <blockquote><p>结论：在 swap 方法中，a、b 的值进行交换，并不会影响到 num1、num2。因为，a、b 中的值，只是从 num1、num2 的复制过来的。也就是说，a、b 相当于 num1、num2 的副本，副本的内容无论怎么修改，都不会影响到原件本身。</p></blockquote></details><ul><li>通过上面例子，我们已经知道了一个方法不能修改一个基本数据类型的参数，而对象引用作为参数就不一样，请看案例二.</li></ul> <details class="custom-block details"><summary>案例二</summary><div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">change</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">change</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// 将数组的第一个元素变为0</span>
+		array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+结果：
+<span class="token number">1</span>
+<span class="token number">0</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210710173510.jpeg" alt="解析"></p> <blockquote><p>结论：array 被初始化 arr 的拷贝也就是一个对象的引用，也就是说 array 和 arr 指向的是同一个数组对象。 因此，外部对引用对象的改变会反映到所对应的对象上。
+实现一个改变对象参数状态的方法并不是一件难事。理由很简单，方法得到的是对象引用的拷贝，对象引用及其他的拷贝同时引用同一个对象。</p></blockquote></details><blockquote><p>很多程序设计语言（特别是，C++和 Pascal)提供了两种参数传递的方式：值调用和引用调用。有些程序员（甚至本书的作者）认为 Java 程序设计语言对对象采用的是引用调用，实际上，这种理解是不对的。
+由于这种误解具有一定的普遍性，所以下面给出一个反例来详细地阐述一下这个问题。</p></blockquote> <details class="custom-block details"><summary>案例三</summary><div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// TODO Auto-generated method stub</span>
+		<span class="token class-name">Student</span> s1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;小张&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">Student</span> s2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;小李&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">Test</span><span class="token punctuation">.</span><span class="token function">swap</span><span class="token punctuation">(</span>s1<span class="token punctuation">,</span> s2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;s1:&quot;</span> <span class="token operator">+</span> s1<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;s2:&quot;</span> <span class="token operator">+</span> s2<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">swap</span><span class="token punctuation">(</span><span class="token class-name">Student</span> x<span class="token punctuation">,</span> <span class="token class-name">Student</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Student</span> temp <span class="token operator">=</span> x<span class="token punctuation">;</span>
+		x <span class="token operator">=</span> y<span class="token punctuation">;</span>
+		y <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;x:&quot;</span> <span class="token operator">+</span> x<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;y:&quot;</span> <span class="token operator">+</span> y<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+结果：
+x<span class="token operator">:</span>小李
+y<span class="token operator">:</span>小张
+s1<span class="token operator">:</span>小张
+s2<span class="token operator">:</span>小李
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p>解析：</p> <ul><li>交换前：
+<img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210710185224.jpeg" alt="交换前"></li> <li>交换后：
+<img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210710185429.jpeg" alt="交换后"></li></ul> <blockquote><p>结论：通过上面两张图可以很清晰的看出： 方法并没有改变存储在变量 s1 和 s2 中的对象引用。swap 方法的参数 x 和 y 被初始化为两个对象引用的拷贝，这个方法交换的是这两个拷贝</p></blockquote></details><blockquote><p>总结
+Java 程序设计语言对对象采用的不是引用调用，实际上，对象引用是按值传递的。
+下面再总结一下 Java 中方法参数的使用情况：</p></blockquote> <ul><li>一个方法不能修改一个基本数据类型的参数（即数值型或布尔型）。</li> <li>一个方法可以改变一个对象参数的状态。</li> <li>一个方法不能让对象参数引用一个新的对象。</li></ul> <h3 id="重载和重写的区别？"><a href="#重载和重写的区别？" class="header-anchor">#</a> 重载和重写的区别？</h3> <blockquote><p>重载就是同样的一个方法能够根据输入数据的不同，做出不同的处理
+重写就是当子类继承自父类的相同方法，输入数据一样，但要做出有别于父类的响应时，你就要覆盖父类方法</p></blockquote> <ol><li>重载</li></ol> <ul><li>发生在同一个类中（或者父类和子类之间），方法名必须相同，参数类型不同、个数不同、顺序不同，方法返回值和访问修饰符可以不同</li> <li>综上：重载就是同一个类中多个同名方法根据不同的传参来执行不同的逻辑处理。</li></ul> <ol start="2"><li>重写</li></ol> <ul><li>发生在运行期，是子类对父类的允许访问的方法的实现过程的重新编写。</li> <li>1）返回值、类型、参数列表必须相同，抛出异常的范围小于等于父类，访问权限修饰符大于等于父类。</li> <li>2）如果父类方法访问权限修饰符为private/final/static,则子类不能重写，被static修饰的方法能够被再次声明。</li> <li>3）构造方法无法被重写
+| 区别点     | 重载方法 | 重写方法                                                     |
+| ---------- | -------- | ------------------------------------------------------------ |
+| 发生范围   | 同一个类 | 子类                                                         |
+| 参数列表   | 必须修改 | 一定不能修改                                                 |
+| 返回类型   | 可修改   | 子类方法返回值类型应比父类方法返回值类型更小或相等           |
+| 异常       | 可修改   | 子类方法声明抛出的异常类应比父类方法声明抛出的异常类更小或相等； |
+| 访问修饰符 | 可修改   | 一定不能做更严格的限制（可以降低限制）                       |
+| 发生阶段   | 编译期   | 运行期                                                       |
+<strong>方法重写要遵循&quot;两同两小一大&quot;</strong></li> <li>“两同”即方法名相同、形参列表相同；</li> <li>“两小”指的是子类方法返回值类型应比父类方法返回值类型更小或相等，子类方法声明抛出的异常类应比父类方法声明抛出的异常类更小或相等；</li> <li>“一大”指的是子类方法的访问权限应比父类方法的访问权限更大或相等。</li></ul> <blockquote><p>关于重写的返回值类型这里需要额外多说明一下，上面的表述不太清晰准确：
+如果方法的返回类型是 void 和基本数据类型，则返回值重写时不可修改。但是如果方法的返回值是引用类型，重写时是可以返回该引用类型的子类的。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>public class Hero {
+    public String name() {
+        return &quot;超级英雄&quot;;
+    }
+}
+public class SuperMan extends Hero{
+    @Override
+    public String name() {
+        return &quot;超人&quot;;
+    }
+    public Hero hero() {
+        return new Hero();
+    }
+}
+
+public class SuperSuperMan extends SuperMan {
+    public String name() {
+        return &quot;超级超级英雄&quot;;
+    }
+
+    @Override
+    public SuperMan hero() {
+        return new SuperMan();
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p>深拷贝vs浅拷贝</p> <ol><li>浅拷贝：对基本数据类型进行值传递，对引用数据类型进行引用传递般的拷贝，此为浅拷贝</li> <li>深拷贝：对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容，此为深拷贝。
+<img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210710190629.jpeg" alt="深拷贝vs浅拷贝"></li></ol> <h2 id="java面向对象"><a href="#java面向对象" class="header-anchor">#</a> java面向对象</h2> <h3 id="面向对象和面向过程的区别？"><a href="#面向对象和面向过程的区别？" class="header-anchor">#</a> 面向对象和面向过程的区别？</h3> <blockquote><p>面向过程 ：面向过程性能比面向对象高。
+因为类调用时需要实例化，开销比较大，比较消耗资源，所以当性能是最重要的考量因素的时候，比如单片机、嵌入式开发、Linux/Unix 等一般采用面向过程开发。但是，面向过程没有面向对象易维护、易复用、易扩展。
+面向对象 ：面向对象易维护、易复用、易扩展。 因为面向对象有封装、继承、多态性的特性，所以可以设计出低耦合的系统，使系统更加灵活、更加易于维护。
+面向对象性能比面向过程低。</p></blockquote> <h3 id="成员变量与局部变量的区别有哪些？"><a href="#成员变量与局部变量的区别有哪些？" class="header-anchor">#</a> 成员变量与局部变量的区别有哪些？</h3> <ol><li>语法</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>成员变量属于类，局部变量是在代码块中或方法中定义的变量或是方法的参数；
+成员变量可以被 public,private,static 等修饰符所修饰，而局部变量不能被访问控制修饰符及 static 所修饰；
+但是，成员变量和局部变量都能被 final 所修饰。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="2"><li>存储方式</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>成员变量是使用 static 修饰的，那么这个成员变量是属于类的，
+如果没有使用 static 修饰，这个成员变量是属于实例的。
+而对象存在于堆内存，局部变量则存在于栈内存。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="3"><li>生存时间</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>成员变量是对象的一部分，它随着对象的创建而存在
+局部变量随着方法的调用而自动消失。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="4"><li>默认值</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>成员变量如果没有被赋初，则会自动以类型的默认值而赋值（一种情况例外:被 final 修饰的成员变量也必须显式地赋值）
+局部变量则不会自动赋值
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="创建一个对象用什么运算符-对象实体与对象引用有何不同"><a href="#创建一个对象用什么运算符-对象实体与对象引用有何不同" class="header-anchor">#</a> 创建一个对象用什么运算符?对象实体与对象引用有何不同?</h3> <p>new运算符，new创建对象实例（对象实例在堆内存中），对象引用指向对象实例（对象引用存放在栈内存中）。
+一个对象引用可以指向 0 个或 1 个对象（一根绳子可以不系气球，也可以系一个气球）;一个对象可以有 n 个引用指向它（可以用 n 条绳子系住一个气球）。</p> <h3 id="对象的相等与指向他们的引用相等-两者有什么不同"><a href="#对象的相等与指向他们的引用相等-两者有什么不同" class="header-anchor">#</a> 对象的相等与指向他们的引用相等,两者有什么不同?</h3> <p>对象的相等，比的是内存中存放的内容是否相等。而引用相等，比较的是他们指向的内存地址是否相等。</p> <h3 id="一个类的构造方法的作用是什么-若一个类没有声明构造方法，该程序能正确执行吗-为什么"><a href="#一个类的构造方法的作用是什么-若一个类没有声明构造方法，该程序能正确执行吗-为什么" class="header-anchor">#</a> 一个类的构造方法的作用是什么? 若一个类没有声明构造方法，该程序能正确执行吗? 为什么?</h3> <ul><li>构造方法作用：初始化类的对象。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>如果一个类没有声明构造方法，也可以执行！因为一个类即使没有声明构造方法也会有默认的不带参数的构造方法。
+如果我们自己添加了类的构造方法（无论是否有参），Java 就不会再添加默认的无参数的构造方法了，
+这时候，就不能直接 new 一个对象而不传递参数了，所以我们一直在不知不觉地使用构造方法，这也是为什么我们在创建对象的时候后面要加一个括号（因为要调用无参的构造方法）。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="构造方法有哪些特点？是否可被-override"><a href="#构造方法有哪些特点？是否可被-override" class="header-anchor">#</a> 构造方法有哪些特点？是否可被 override?</h3> <p>特点：</p> <ol><li>名字与类名相同</li> <li>没有返回值，但不能用void声明函数</li> <li>生成类的对象时自动执行，无需调用</li></ol> <blockquote><p>构造方法不能被override（重写）,但是可以overload（重载）,所以你可以看到一个类中有多个构造函数的情况。</p></blockquote> <h3 id="面向对象三大特征"><a href="#面向对象三大特征" class="header-anchor">#</a> 面向对象三大特征</h3> <h4 id="封装"><a href="#封装" class="header-anchor">#</a> 封装</h4> <blockquote><p>把一个对象的状态信息（也就是属性）隐藏在对象内部，不允许外部对象直接访问对象的内部信息。但是可以提供一些可以被外界访问的方法(get和set方法)来操作属性。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>public class Student {
+    private int id;//id属性私有化
+    private String name;//name属性私有化
+    //获取id的方法
+    public int getId() {
+        return id;
+    }
+    //设置id的方法
+    public void setId(int id) {
+        this.id = id;
+    }
+    //获取name的方法
+    public String getName() {
+        return name;
+    }
+    //设置name的方法
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h4 id="继承"><a href="#继承" class="header-anchor">#</a> 继承</h4> <blockquote><p>继承是使用已存在的类的定义作为基础建立新类的技术，新类的定义可以增加新的数据或新的功能，也可以用父类的功能，但不能选择性地继承父类。</p></blockquote> <ul><li>使用继承的好处
+通过使用继承，可以快速地创建新的类，可以提高代码的重用，程序的可维护性，节省大量创建新类的时间 ，提高我们的开发效率。</li> <li>注意点
+<ol><li>子类拥有父类对象所有的属性和方法（包括私有属性和私有方法），但是父类中的私有属性和方法子类是无法访问，只是拥有。</li> <li>子类可以拥有自己属性和方法，即子类可以对父类进行扩展。</li> <li>子类可以用自己的方式实现父类的方法。（重写）</li></ol></li></ul> <h4 id="多态"><a href="#多态" class="header-anchor">#</a> 多态</h4> <blockquote><p>多态，表示一个对象具有多种的状态（具体表现为父类的引用指向子类的实例）。</p></blockquote> <ul><li>特点:
+<ol><li>对象类型和引用类型之间具有继承（类）/实现（接口）的关系；</li> <li>引用类型变量发出的方法调用的到底是哪个类中的方法，必须在程序运行期间才能确定；</li> <li>多态不能调用“只在子类存在但在父类不存在”的方法；</li> <li>如果子类重写了父类的方法，真正执行的是子类覆盖的方法，如果子类没有覆盖父类的方法，执行的是父类的方法。</li></ol></li></ul> <h3 id="string-stringbuffer-和-stringbuilder-的区别是什么-string-为什么是不可变的"><a href="#string-stringbuffer-和-stringbuilder-的区别是什么-string-为什么是不可变的" class="header-anchor">#</a> String StringBuffer 和 StringBuilder 的区别是什么? String 为什么是不可变的?</h3> <p><strong>可变性</strong>
+String 类中使用 final 关键字修饰字符数组来保存字符串，private final char value[]，所以String 对象是不可变的。</p> <blockquote><p>补充：在 Java 9 之后，String 、StringBuilder 与 StringBuffer 的实现改用 byte 数组存储字符串 private final byte[] value
+StringBuilder 与 StringBuffer 都继承自 AbstractStringBuilder 类，在 AbstractStringBuilder 中也是使用字符数组保存字符串char[]value 但是没有用 final 关键字修饰，所以这两种对象都是可变的。
+StringBuilder 与 StringBuffer 的构造方法都是调用父类构造方法也就是AbstractStringBuilder 实现的
+AbstractStringBuilder.java</p></blockquote> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">AbstractStringBuilder</span> <span class="token keyword">implements</span> <span class="token class-name">Appendable</span><span class="token punctuation">,</span> <span class="token class-name">CharSequence</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * The value is used for character storage.
+     */</span>
+    <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> value<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * The count is the number of characters used.
+     */</span>
+    <span class="token keyword">int</span> count<span class="token punctuation">;</span>
+
+    <span class="token class-name">AbstractStringBuilder</span><span class="token punctuation">(</span><span class="token keyword">int</span> capacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        value <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">char</span><span class="token punctuation">[</span>capacity<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><strong>线程安全性</strong></p> <ol><li>String 中的对象是不可变的，也就可以理解为常量，线程安全。</li> <li>StringBuffer 对方法加了同步锁或者对调用的方法加了同步锁，所以是线程安全的。</li> <li>StringBuilder 并没有对方法进行加同步锁，所以是非线程安全的。</li></ol> <blockquote><p>AbstractStringBuilder 是 StringBuilder 与 StringBuffer 的公共父类，定义了一些字符串的基本操作，如 expandCapacity、append、insert、indexOf 等公共方法。</p></blockquote> <p><strong>性能</strong></p> <ol><li>每次对 String 类型进行改变的时候，都会生成一个新的 String 对象，然后将指针指向新的 String 对象。</li> <li>StringBuffer 每次都会对 StringBuffer 对象本身进行操作，而不是生成新的对象并改变对象引用。</li> <li>相同情况下StringBuilder相比StringBuffer能获得10%的性能提升，但却要冒多线程不安全的风险。</li></ol> <p><strong>总结</strong></p> <ol><li>操作少量的数据: 适用 String</li> <li>单线程操作字符串缓冲区下操作大量数据: 适用 StringBuilder</li> <li>多线程操作字符串缓冲区下操作大量数据: 适用 StringBuffer</li></ol> <h3 id="object-类的常见方法总结"><a href="#object-类的常见方法总结" class="header-anchor">#</a> Object 类的常见方法总结</h3> <blockquote><p>Object 类是一个特殊的类，是所有类的父类。它主要提供了以下11个方法：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>public final native Class&lt;?&gt; getClass()//native方法，用于返回当前运行时对象的Class对象，使用了final关键字修饰，故不允许子类重写。
+public native int hashCode() //native方法，用于返回对象的哈希码，主要使用在哈希表中，比如JDK中的HashMap。
+public boolean equals(Object obj)//用于比较2个对象的内存地址是否相等，String类对该方法进行了重写用户比较字符串的值是否相等。
+protected native Object clone() throws CloneNotSupportedException//naitive方法，用于创建并返回当前对象的一份拷贝。一般情况下，对于任何对象 x，表达式 x.clone() != x 为true，x.clone().getClass() == x.getClass() 为true。Object本身没有实现Cloneable接口，所以不重写clone方法并且进行调用的话会发生CloneNotSupportedException异常。
+public String toString()//返回类的名字@实例的哈希码的16进制的字符串。建议Object所有的子类都重写这个方法。
+public final native void notify()//native方法，并且不能重写。唤醒一个在此对象监视器上等待的线程(监视器相当于就是锁的概念)。如果有多个线程在等待只会任意唤醒一个。
+public final native void notifyAll()//native方法，并且不能重写。跟notify一样，唯一的区别就是会唤醒在此对象监视器上等待的所有线程，而不是一个线程。
+public final native void wait(long timeout) throws InterruptedException//native方法，并且不能重写。暂停线程的执行。注意：sleep方法没有释放锁，而wait方法释放了锁 。timeout是等待时间。
+public final void wait(long timeout, int nanos) throws InterruptedException//多了nanos参数，这个参数表示额外时间（以毫微秒为单位，范围是 0-999999）。 所以超时的时间还需要加上nanos毫秒。
+public final void wait() throws InterruptedException//跟之前的2个wait方法一样，只不过该方法一直等待，没有超时时间这个概念
+protected void finalize() throws Throwable { }//实例被垃圾回收器回收的时候触发的操作
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="反射"><a href="#反射" class="header-anchor">#</a> 反射</h2> <h3 id="何为反射？"><a href="#何为反射？" class="header-anchor">#</a> 何为反射？</h3> <blockquote><p>通过反射你可以获取任意一个类的所有属性和方法，你还可以调用这些方法和属性。</p></blockquote> <h3 id="反射机制优缺点"><a href="#反射机制优缺点" class="header-anchor">#</a> 反射机制优缺点</h3> <ul><li>优点 ： 可以让咱们的代码更加灵活、为各种框架提供开箱即用的功能提供了便利</li> <li>缺点 ：让我们在运行时有了分析操作类的能力，这同样也增加了安全问题。比如可以无视泛型参数的安全检查（泛型参数的安全检查发生在编译时）。另外，反射的性能也要稍差点，不过，对于框架来说实际是影响不大的。</li></ul> <h3 id="反射的应用场景"><a href="#反射的应用场景" class="header-anchor">#</a> 反射的应用场景</h3> <ul><li>Spring/Spring Boot、MyBatis 等等框架中都大量使用了反射机制。</li> <li>这些框架中也大量使用了动态代理，而动态代理的实现也依赖反射。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>通过 JDK 实现动态代理的示例代码，其中就使用了反射类 Method 来调用指定的方法。
+public class DebugInvocationHandler implements InvocationHandler {
+    /**
+     * 代理类中的真实对象
+     */
+    private final Object target;
+
+    public DebugInvocationHandler(Object target) {
+        this.target = target;
+    }
+    public Object invoke(Object proxy, Method method, Object[] args) throws InvocationTargetException, IllegalAccessException {
+        System.out.println(&quot;before method &quot; + method.getName());
+        Object result = method.invoke(target, args);
+        System.out.println(&quot;after method &quot; + method.getName());
+        return result;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><ul><li>注解 的实现也用到了反射。</li></ul> <blockquote><p>为什么你使用 Spring 的时候 ，一个@Component注解就声明了一个类为 Spring Bean 呢？为什么你通过一个 @Value注解就读取到配置文件中的值呢？究竟是怎么起作用的呢？
+这些都是因为你可以基于反射分析类，然后获取到类/属性/方法/方法的参数上的注解。你获取到注解之后，就可以做进一步的处理。</p></blockquote> <h2 id="异常"><a href="#异常" class="header-anchor">#</a> 异常</h2> <h3 id="java-异常类层次结构图"><a href="#java-异常类层次结构图" class="header-anchor">#</a> Java 异常类层次结构图</h3> <p><img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210712130933.png" alt="异常结构图"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code> * java.lang.Throwable
+ * 		|-----java.lang.Error:一般不编写针对性的代码进行处理。
+ * 		|-----java.lang.Exception:可以进行异常的处理
+ * 			|------编译时异常(checked)
+ * 					|-----IOException
+ * 						|-----FileNotFoundException
+ * 					|-----ClassNotFoundException
+ * 			|------运行时异常(unchecked,RuntimeException)
+ * 					|-----NullPointerException
+ * 					|-----ArrayIndexOutOfBoundsException
+ * 					|-----ClassCastException
+ * 					|-----NumberFormatException
+ * 					|-----InputMismatchException
+ * 					|-----ArithmeticException
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p><img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210712131036.png" alt="编译时异常和运行时异常"></p> <ul><li>编译时异常：执行javac.exe命名时，可能出现的异常</li> <li>运行时异常：执行java.exe命名时，出现的异常</li></ul> <blockquote><p>在 Java 中，所有的异常都有一个共同的祖先 java.lang 包中的 Throwable 类。Throwable 类有两个重要的子类 Exception（异常）和 Error（错误）。Exception 能被程序本身处理(try-catch)， Error 是无法处理的(只能尽量避免)。
+Exception 和 Error 二者都是 Java 异常处理的重要子类，各自都包含大量子类。</p></blockquote> <ul><li>Exception :程序本身可以处理的异常，可以通过 catch 来进行捕获。Exception 又可以分为 受检查异常(必须处理) 和 不受检查异常(可以不处理)。</li> <li>Error ：Error 属于程序无法处理的错误 ，我们没办法通过 catch 来进行捕获 。</li> <li>例如，Java 虚拟机运行错误（Virtual MachineError）、虚拟机内存不够错误(OutOfMemoryError)、类定义错误（NoClassDefFoundError）等 。这些异常发生时，Java 虚拟机（JVM）一般会选择线程终止。</li></ul> <ol><li>受检查异常
+Java 代码在编译过程中，如果受检查异常没有被 catch/throw 处理的话，就没办法通过编译 。比如下面这段 IO 操作的代码。
+<img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210712132825.png" alt="IO操作异常"></li></ol> <blockquote><p>除了RuntimeException及其子类以外，其他的Exception类及其子类都属于受检查异常 。常见的受检查异常有： IO 相关的异常、ClassNotFoundException 、SQLException...。</p></blockquote> <ol start="2"><li>不受检查异常</li></ol> <blockquote><p>Java 代码在编译过程中 ，我们即使不处理不受检查异常也可以正常通过编译。
+RuntimeException 及其子类都统称为非受检查异常，例如：NullPointerException、NumberFormatException（字符串转换为数字）、ArrayIndexOutOfBoundsException（数组越界）、ClassCastException（类型转换错误）、ArithmeticException（算术错误）等。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>//******************以下是运行时异常***************************
+	//ArithmeticException
+	@Test
+	public void test6(){
+		int a = 10;
+		int b = 0;
+		System.out.println(a / b);
+	}
+	//InputMismatchException 输入数据类型不匹配异常
+    //比如你输入的是abc,它用nextInt来接收，就会报错
+	@Test
+	public void test5(){
+		Scanner scanner = new Scanner(System.in);
+		int score = scanner.nextInt();
+		System.out.println(score);
+		scanner.close();
+	}
+	//NumberFormatException
+	@Test
+	public void test4(){
+		String str = &quot;123&quot;;
+		str = &quot;abc&quot;;
+		int num = Integer.parseInt(str);
+	}
+	//ClassCastException
+	@Test
+	public void test3(){
+		Object obj = new Date();
+		String str = (String)obj;
+	}
+	//IndexOutOfBoundsException
+	@Test
+	public void test2(){
+		//ArrayIndexOutOfBoundsException
+//		int[] arr = new int[10];
+//		System.out.println(arr[10]);
+		//StringIndexOutOfBoundsException
+		String str = &quot;abc&quot;;
+		System.out.println(str.charAt(3));
+	}
+	//NullPointerException
+	@Test
+	public void test1(){
+		
+//		int[] arr = null;
+//		System.out.println(arr[3]);
+		
+		String str = &quot;abc&quot;;
+		str = null;
+		System.out.println(str.charAt(0));
+		
+	}
+	//******************以下是编译时异常***************************
+	@Test
+	public void test7(){
+//		File file = new File(&quot;hello.txt&quot;);
+//		FileInputStream fis = new FileInputStream(file);
+//		
+//		int data = fis.read();
+//		while(data != -1){
+//			System.out.print((char)data);
+//			data = fis.read();
+//		}
+//		
+//		fis.close();
+	}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br></div></div><h3 id="throwable-类常用方法"><a href="#throwable-类常用方法" class="header-anchor">#</a> Throwable 类常用方法</h3> <ul><li>public string getMessage():返回异常发生时的简要描述</li> <li>public string toString():返回异常发生时的详细信息</li> <li>public string getLocalizedMessage():返回异常对象的本地化信息。使用 Throwable 的子类覆盖这个方法，可以生成本地化信息。如果子类没有覆盖该方法，则该方法返回的信息与 getMessage（）返回的结果相同</li> <li>public void printStackTrace():在控制台上打印 Throwable 对象封装的异常信息</li></ul> <h3 id="try-catch-finally"><a href="#try-catch-finally" class="header-anchor">#</a> try-catch-finally</h3> <ul><li>try块： 用于捕获异常。其后可接零个或多个 catch 块，如果没有 catch 块，则必须跟一个 finally 块。</li> <li>catch块： 用于处理 try 捕获到的异常。</li> <li>finally 块： 无论是否捕获或处理异常，finally 块里的语句都会被执行。当在 try 块或 catch 块中遇到 return 语句时，finally 语句块将在方法返回之前被执行。</li></ul> <h4 id="在以下-3-种特殊情况下，finally-块不会被执行："><a href="#在以下-3-种特殊情况下，finally-块不会被执行：" class="header-anchor">#</a> 在以下 3 种特殊情况下，finally 块不会被执行：</h4> <ul><li>在 try 或 finally块中用了 System.exit(int)退出程序。但是，如果 System.exit(int) 在异常语句之后，finally 还是会被执行</li> <li>程序所在的线程死亡。</li> <li>关闭 CPU。
+<strong>注意：</strong> 当 try 语句和 finally 语句中都有 return 语句时，在方法返回之前，finally 语句的内容将被执行，并且 finally 语句的返回值将会覆盖原始的返回值。如下：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>public class Test {
+    public static int f(int value) {
+        try {
+            return value * value;
+        } finally {
+            if (value == 2) {
+                return 0;
+            }
+        }
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>如果调用 f(2)，返回值将是 0，因为 finally 语句的返回值覆盖了 try 语句块的返回值。</p> <h4 id="使用-try-with-resources-来代替try-catch-finally"><a href="#使用-try-with-resources-来代替try-catch-finally" class="header-anchor">#</a> 使用 try-with-resources 来代替try-catch-finally</h4> <ol><li>适用范围（资源的定义）： 任何实现 java.lang.AutoCloseable或者 java.io.Closeable 的对象</li> <li>关闭资源和 finally 块的执行顺序： 在 try-with-resources 语句中，任何 catch 或 finally 块在声明的资源关闭后运行</li></ol> <blockquote><p>面对必须要关闭的资源，我们总是应该优先使用 try-with-resources 而不是try-finally。随之产生的代码更简短，更清晰，产生的异常对我们也更有用。try-with-resources语句让我们更容易编写必须要关闭的资源的代码，若采用try-finally则几乎做不到这点。
+Java 中类似于InputStream、OutputStream 、Scanner 、PrintWriter等的资源都需要我们调用close()方法来手动关闭，一般情况下我们都是通过try-catch-finally语句来实现这个需求，如下：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code> //读取文本文件的内容
+        Scanner scanner = null;
+        try {
+            scanner = new Scanner(new File(&quot;D://read.txt&quot;));
+            while (scanner.hasNext()) {
+                System.out.println(scanner.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            if (scanner != null) {
+                scanner.close();
+            }
+        }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>使用 Java 7 之后的 try-with-resources 语句改造上面的代码:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>try (Scanner scanner = new Scanner(new File(&quot;test.txt&quot;))) {
+    while (scanner.hasNext()) {
+        System.out.println(scanner.nextLine());
+    }
+} catch (FileNotFoundException fnfe) {
+    fnfe.printStackTrace();
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="i-o流"><a href="#i-o流" class="header-anchor">#</a> I/O流</h2> <h3 id="什么是序列化-什么是反序列化"><a href="#什么是序列化-什么是反序列化" class="header-anchor">#</a> 什么是序列化?什么是反序列化?</h3> <blockquote><p>如果我们需要持久化 Java 对象比如将 Java 对象保存在文件中，或者在网络传输 Java 对象，这些场景都需要用到序列化。
+简单来说：</p></blockquote> <ul><li>序列化： 将数据结构或对象转换成二进制字节流的过程</li> <li>反序列化：将在序列化过程中所生成的二进制字节流的过程转换成数据结构或者对象的过程</li></ul> <blockquote><p>对于 Java 这种面向对象编程语言来说，我们序列化的都是对象（Object）也就是实例化后的类(Class)，但是在 C++这种半面向对象的语言中，struct(结构体)定义的是数据结构类型，而 class 对应的是对象类型。
+维基百科
+序列化（serialization）在计算机科学的数据处理中，是指将数据结构或对象状态转换成可取用格式（例如存成文件，存于缓冲，或经由网络中发送），
+以留待后续在相同或另一台计算机环境中，能恢复原先状态的过程。依照序列化格式重新获取字节的结果时，可以利用它来产生与原始对象相同语义的副本。
+对于许多对象，像是使用大量引用的复杂对象，这种序列化重建的过程并不容易。
+面向对象中的对象序列化，并不概括之前原始对象所关系的函数。这种过程也称为对象编组（marshalling）。
+从一系列字节提取数据结构的反向操作，是反序列化（也称为解编组、deserialization、unmarshalling）。
+综上：序列化的主要目的是通过网络传输对象或者说是将对象存储到文件系统、数据库、内存中。
+<img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210712164215.png" alt="序列化"></p></blockquote> <h3 id="java-序列化中如果有些字段不想进行序列化，怎么办？"><a href="#java-序列化中如果有些字段不想进行序列化，怎么办？" class="header-anchor">#</a> Java 序列化中如果有些字段不想进行序列化，怎么办？</h3> <p>对于不想进行序列化的变量，使用transient关键字进行修饰</p> <ul><li>作用</li> <li>transient关键字的作用是：阻止实例中那些用此关键字修饰的变量序列化；当对象被反序列化时，被transient修饰的变量值不会被持久化和恢复。</li> <li>transient只能修饰变量，不能修饰类和方法</li></ul> <h3 id="获取用键盘输入常用的两种方法"><a href="#获取用键盘输入常用的两种方法" class="header-anchor">#</a> 获取用键盘输入常用的两种方法</h3> <p>1.Scanner</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Scanner input = new Scanner(System.in);
+String s  = input.nextLine();
+input.close();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>2.BufferedReader</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+String s = input.readLine();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="java-中-io-流分为几种"><a href="#java-中-io-流分为几种" class="header-anchor">#</a> Java 中 IO 流分为几种?</h3> <ul><li>按流向分，
+输入流和输出流</li> <li>按处理数据不同类型分，</li></ul> <details class="custom-block details"><summary>字节流和字符流</summary><ul><li>字节流：二进制，可以处理一切文件，包括：纯文本、doc、音频、视频等。</li> <li>字符流：文本文件，只能处理纯文本。</li></ul></details><ul><li>按功能不同分:</li></ul> <details class="custom-block details"><summary>节点流和处理流</summary><ul><li>节点流：包裹源头。</li> <li>处理流：增强功能，提高性能</li></ul></details><blockquote><p>Java Io 流共涉及 40 多个类，这些类看上去很杂乱，但实际上很有规则，而且彼此之间存在非常紧密的联系， Java I0 流的 40 多个类都是从如下 4 个抽象类基类中派生出来的。</p></blockquote> <ul><li>InputStream/Reader: 所有的输入流的基类，前者是字节输入流，后者是字符输入流。</li> <li>OutputStream/Writer:  所有输出流的基类，前者是字节输出流，后者是字符输出流。
+按操作方式分类结构图：
+<img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210712170452.png" alt="操作方式分类">
+按操作对象分类结构图：
+<img src="https://gitee.com/li-wen-kai/picgo/raw/master/img/20210712170803.png" alt="操作对象分类"></li></ul> <h3 id="既然有了字节流-为什么还要有字符流"><a href="#既然有了字节流-为什么还要有字符流" class="header-anchor">#</a> 既然有了字节流,为什么还要有字符流?</h3> <p>本质：不管是文件读写还是网络发送接收，信息的最小存储单元都是字节，那为什么 I/O 流操作要分为字节流操作和字符流操作呢？</p> <blockquote><p>字符流是由 Java 虚拟机将字节转换得到的，问题就出在这个过程还算是非常耗时，并且，如果我们不知道编码类型就很容易出现乱码问题。所以， I/O 流就干脆提供了一个直接操作字符的接口，方便我们平时对字符进行流操作。
+如果音频文件、图片等媒体文件用字节流比较好，如果涉及到字符的话使用字符流比较好。</p></blockquote></div> <footer class="page-edit" style="display:none;"><div class="edit-link"><a href="https://github.com/kai-max/edit/master/docs/views/Interview/练习/基础/java-01.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> <!----> <div class="article-list" data-v-2af88190><div class="article-title" data-v-2af88190><a href="/timeline/" class="iconfont icon-shizhong" data-v-2af88190>最近更新</a></div> <div class="article-wrapper" data-v-2af88190><dl data-v-2af88190><dd data-v-2af88190>01</dd> <dt data-v-2af88190><a href="/views/Interview/%E7%BB%83%E4%B9%A0/%E9%9B%86%E5%90%88/java-02.html" data-v-2af88190><div data-v-2af88190>java集合框架常见面试题</div></a> <span data-v-2af88190>07-12</span></dt></dl><dl data-v-2af88190><dd data-v-2af88190>02</dd> <dt data-v-2af88190><a href="/views/Interview/JavaSE%E9%AB%98%E7%BA%A7/java%E5%A4%9A%E7%BA%BF%E7%A8%8B-lwk.html" data-v-2af88190><div data-v-2af88190>Java多线程</div></a> <span data-v-2af88190>07-08</span></dt></dl><dl data-v-2af88190><dd data-v-2af88190>03</dd> <dt data-v-2af88190><a href="/views/Interview/JavaSE%E9%AB%98%E7%BA%A7/java%E9%9B%86%E5%90%88-lwk.html" data-v-2af88190><div data-v-2af88190>Java集合</div></a> <span data-v-2af88190>07-05</span></dt></dl></div> <div data-v-2af88190><a href="/timeline/" class="article-more" data-v-2af88190>更多文章 &gt;</a></div></div></main> <!----> <div class="comments-wrapper" data-v-584a622c><div class="valine-wrapper"><div id="valine"></div></div></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-a81d141e data-v-a81d141e><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a81d141e><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a81d141e></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a81d141e></path></svg></div><!----><div data-v-48108b4c><div class="DetailsOpenFlag" style="right:1rem;bottom:9rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;font-size:14px;font-weight:500;display:none;" data-v-48108b4c>
+ 展开 
+
+</div></div><div id="musicPlayer" data-v-0584ea4d><!----> <div class="bbox" data-v-0584ea4d><div class="pan" style="background-image:url(/assets/img/pan.07613e22.png);" data-v-0584ea4d><img src="" alt class="pan_c" data-v-0584ea4d></div> <div class="box" style="background-image:url();" data-v-0584ea4d><div class="music_shlter_2" style="background-image:url();" data-v-0584ea4d></div> <div class="music_shlter" style="background-image:url();" data-v-0584ea4d></div> <div class="music_shlter_3" data-v-0584ea4d></div> <div class="music_dis" data-v-0584ea4d><div class="dis_list" data-v-0584ea4d>···</div> <p class="music_title" data-v-0584ea4d></p> <p class="music_intro" data-v-0584ea4d>歌手: </p> <ul class="music_words" data-v-0584ea4d><div class="music_words_box" style="top:0px;" data-v-0584ea4d></div></ul></div> <div class="control_box" data-v-0584ea4d><div class="control_button" data-v-0584ea4d><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAACMCAYAAACksC0pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALjSURBVHhe7doxbuswFETRSG68pVTZ+y+SJdmVE/GDC0hzBxnynoqpBGhIaoy84/vyBnu9Xv9ut9vH/HN5j8fj836/v88/Mc/n8+uca9RxHPgm2VUkwN2kNux4TiTA65Y+5nIL53m+5hI1nuMJLGeAgKu0xW42AwQEiv1/10bJBLhhC0198z2BBFtoueUC3I0BlkvdOLZQyGiHc4myhXJsoc2CG9YWSkgFeJ6nJYZgCy1nCy23XIC7tVBPYL/YhjVAwGiHc4mK/Uc+daX8FbZQ/YrfQEhqpGIwQEDqkzE2SiTA3X5GJHkCAcuVmN1aqIO95ZIb1gABqQD9GQG5XuxcsRyp4KSuUE8gwRZabrkAd2OA5Wyh5Rzs7WcLbRbcsLZQQipAB3shttByttByywW4Wwv1BPaLbVgDBDjYW84WWs5vYLnkjWOAgFSADvYuwBMISG1YWyhkvNi5RNlCIZaYcqkAx3MMEHC92LliOVLBSV2hnkBCasPGSowtlGELLWeAEFtoOQd7+9lCmwU3rC2UkApwjG54AgGpAG2hEFtoueUC3K2FegL7xTasAQJGO5xLlCMVEFtoOb+B5ZI3jgECUgE62LsATyAgtWFtoRBHKspZYsqlAhzPMUDA9WLniuVIBSd1hXoCCakNGysxtlCGLbScAUJsoeUc7O1nC20W3LC2UEIqwDG64QkEpAK0hUJsoeWWC3C3FuoJ7BfbsAYIGO1wLlGOVEBsoeX8BpZL3jgGCEgF6GDvAjyBgOVKzG4tNDVSEfsZsRtLTLlUgOM5Bgi4XuxcsRyp4KSuUE8gwRZabrkAd2OA5Wyh5Rzs7WcLbRbcsLZQQipAB3shttByttByywW4Wwv1BPaLbVgDBDjYW84Wql/xGwgZ85pziTNAQOqT4WDvAjyBgOVKzG4t1MHecskNa4CAVID+jIBcL3auWI5UcFJXqCeQYAstt1yAuzHAcrbQcg729rOFNstt2LfvHxY+GuRFc4rhAAAAAElFTkSuQmCC" alt class="control_icon" data-v-0584ea4d></div> <div class="progress" data-v-0584ea4d><div class="progress_c" style="width:0%;" data-v-0584ea4d><div class="progress_circle" data-v-0584ea4d><div class="progress_circle_c" data-v-0584ea4d></div></div></div></div></div></div> <video id="music" autoplay="autoplay" src="" name="media" data-v-0584ea4d></video></div></div><!----></div></div>
+    <script src="/assets/js/app.905c73bd.js" defer></script><script src="/assets/js/5.6d8b57f8.js" defer></script><script src="/assets/js/1.1422e221.js" defer></script><script src="/assets/js/2.95e401c1.js" defer></script><script src="/assets/js/50.0eb648ed.js" defer></script><script src="/assets/js/20.75d616fd.js" defer></script>
+  </body>
+</html>
